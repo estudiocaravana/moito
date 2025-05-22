@@ -1,0 +1,49 @@
+---
+import data from "../data/navbar.json";
+---
+
+<header class="caixa py-6">
+  <nav class="flex items-center justify-between gap-20">
+    <!-- logo -->
+    <a href="/" aria-label="Inicio">
+      <svg class="size-16 stroke-slate-950" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"></path>
+        <path d="M16 8 2 22"></path>
+        <path d="M17.5 15H9"></path>
+      </svg>
+    </a>
+    <!-- buscar -->
+    <div class="flex flex-1">
+      <input type="text" id="buscar" class="h-12 w-full max-w-[460px] text-slate-950 placeholder:text-slate-950 flex items-center border-slate-300 rounded-s-full pl-9 focus:z-10 focus:border-cyan-500 focus:ring-cyan-500" placeholder="Escribe o título ou autor que procuras" />
+      <button type="button" class="border-slate-300 h-12 pl-6 pr-9 flex items-center gap-2 rounded-e-full text-white bg-slate-950 hover:bg-slate-700 focus:outline-hidden focus:bg-slate-700">
+        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+        Buscar
+      </button>
+    </div>
+    <!-- páginas -->
+    <div>
+      <ul class="flex items-center gap-x-6 uppercase text-sm">
+        {
+          data.paginas.map((item) => (
+            <li>
+              <a href={item.url}>{item.tit}</a>
+            </li>
+          ))
+        }
+        <!-- usuario -->
+        <li>
+          <a href="#">
+            <svg class="size-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 20a6 6 0 0 0-12 0"></path>
+              <circle cx="12" cy="10" r="4"></circle>
+              <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

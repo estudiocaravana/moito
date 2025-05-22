@@ -1,0 +1,14 @@
+{
+  "xler": [
+    { "tit": "Sobre nós", "url": "/" },
+    { "tit": "Contacto", "url": "/" },
+    { "tit": "Blog do libro en Galego", "url": "/" },
+    { "tit": "Preguntas frecuentes", "url": "/" }
+  ],
+  "descobre": [
+    { "tit": "Novidades", "url": "/" },
+    { "tit": "Os nosos recomendados", "url": "/" },
+    { "tit": "Os máis lidos", "url": "/" },
+    { "tit": "Autores", "url": "/" }
+  ]
+}

@@ -1,0 +1,77 @@
+---
+import data from "../data/footer.json";
+---
+
+<!-- banda únete -->
+<div class="bg-linear-to-r from-cyan-500 to-cyan-400 text-center py-20 mt-36">
+  <div class="caixa">
+    <div class="text-4xl font-bold font-display">Únete á nosa Newsletter</div>
+    <div class="mt-3 text-xl">e descubre todas as novidades do libro en galego</div>
+    <!-- buscar -->
+    <div class="flex items-center justify-center mt-16">
+      <input type="text" id="buscar" class="h-12 w-full max-w-[460px] text-slate-950 font-medium placeholder:text-slate-950 placeholder:font-medium flex items-center border-slate-300 rounded-s-full pl-9 focus:z-10 focus:border-cyan-500 focus:ring-cyan-500" placeholder="Correo electrónico" />
+      <button type="button" class="border-slate-300 h-12 pl-6 pr-9 flex items-center gap-2 rounded-e-full font-semibold text-white bg-slate-950 hover:bg-slate-700 focus:outline-hidden focus:bg-slate-700">Suscribirme</button>
+    </div>
+    <div class="flex items-center justify-center mt-6">
+      <input type="checkbox" class="shrink-0 mt-0.5 border-gray-200 rounded-sm text-cyan-600 focus:ring-cyan-500 checked:border-cyan-500" id="hs-default-checkbox" />
+      <label for="hs-default-checkbox" class="ms-3">Lin e acepto a política de privacidade</label>
+    </div>
+  </div>
+</div>
+<!-- footer -->
+<footer class="bg-slate-950 text-white pt-16 pb-12 text-base font-medium">
+  <div class="caixa flex flex-col gap-9 lg:flex-row lg:gap-6">
+    <div class="flex-1">
+      <svg class="size-16 stroke-white" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"></path>
+        <path d="M16 8 2 22"></path>
+        <path d="M17.5 15H9"></path>
+      </svg>
+    </div>
+    <div class="flex-1">
+      <div class="font-bold font-display pb-2 text-xl">M8 por ler</div>
+      <ul>
+        {
+          data.xler.map((item) => (
+            <li>
+              <a class="text-slate-300 hover:text-slate-400" href={item.url}>
+                {item.tit}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="flex-1">
+      <div class="font-bold font-display pb-2 text-xl">Descobre</div>
+      <ul>
+        {
+          data.descobre.map((item) => (
+            <li>
+              <a class="text-slate-300 hover:text-slate-400" href={item.url}>
+                {item.tit}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="flex-1">
+      <div class="font-bold font-display pb-3 text-xl">Síguenos</div>
+      <div class="inline-flex gap-3">
+        <a class="text-slate-300 hover:text-slate-400" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+          </svg>
+        </a>
+        <a class="text-slate-300 hover:text-slate-400" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter">
+            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

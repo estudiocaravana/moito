@@ -1,0 +1,32 @@
+---
+import data from "../../data/valoracions.json";
+import Estrelas from "../Estrelas.astro";
+---
+
+<div class="flex">
+  <div class="w-40 text-cyan-500">
+    <Estrelas />
+  </div>
+  <div>
+    <span class="text-2xl font-bold inline-block pl-3 pr-2">4.5</span>
+  </div>
+</div>
+<span class="text-slate-500 text-sm">250 valoracións</span>
+
+<div class="space-y-5 mt-9">
+  <!-- Progress -->
+  {
+    data.datos.map((item) => (
+      <div>
+        <div class="mb-2 flex justify-between items-center">
+          <h3 class="text-sm text-slate-800">{item.tit} estrelas</h3>
+          <span class="text-sm text-slate-800">{item.valor}%</span>
+        </div>
+        <div class="flex w-full h-2 bg-slate-200 rounded-full overflow-hidden" role="progressbar" aria-valuenow={item.valor} aria-valuemin="0" aria-valuemax="100">
+          <div class="flex flex-col justify-center rounded-full overflow-hidden bg-cyan-500 text-xs text-white text-center whitespace-nowrap transition duration-500" style={{ width: `${item.valor}%` }} />
+        </div>
+      </div>
+    ))
+  }
+  <!-- End Progress -->
+</div>

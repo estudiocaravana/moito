@@ -1,0 +1,12 @@
+{
+  "paginas": [
+    { "tit": "libros e publicacións", "url": "/libros" },
+    { "tit": "autores", "url": "/autores" },
+    { "tit": "editoriais", "url": "/editoriais" }
+  ],
+  "migas": [
+    { "tit": "Inicio", "url": "/" },
+    { "tit": "Libros", "url": "/" },
+    { "tit": "Infantil", "url": "/" }
+  ]
+}

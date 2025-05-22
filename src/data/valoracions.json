@@ -1,0 +1,25 @@
+{
+  "datos": [
+    { "tit": "5", "valor": "85" },
+    { "tit": "4", "valor": "10" },
+    { "tit": "3", "valor": "5" },
+    { "tit": "2", "valor": "0" },
+    { "tit": "1", "valor": "0" }
+  ],
+  "opinions": [
+    {
+      "nome": "Xaime Varela",
+      "opinions": "7",
+      "estrelas": "5",
+      "comentario": "Moi recomendábel, como todo o de Rivas.",
+      "foto": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+    },
+    {
+      "nome": "María Reimóndez",
+      "opinions": "5",
+      "estrelas": "4",
+      "comentario": "Unha novela que non se pode deixar de ler.",
+      "foto": "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+    }
+  ]
+}

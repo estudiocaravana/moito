@@ -1,0 +1,19 @@
+{
+  "datos": [
+    { "tit": "Formato", "valor": "Bolsillo, Ebook" },
+    { "tit": "Páxinas", "valor": "216" },
+    { "tit": "Publicación", "valor": "2024" },
+    { "tit": "ISBN", "valor": "978-84-1110-572-9" }
+  ],
+  "xeneros": [
+    { "tit": "Novela negra", "url": "#" },
+    { "tit": "Narrativa", "url": "#" }
+  ],
+  "etiquetas": [
+    { "tit": "Galicia", "url": "#" },
+    { "tit": "Intriga", "url": "#" },
+    { "tit": "Salvaxe", "url": "#" },
+    { "tit": "Sociedade", "url": "#" },
+    { "tit": "Lectura lixeira", "url": "#" }
+  ]
+}
