@@ -1,5 +1,6 @@
 ---
 import data from "../data/footer.json";
+import logolibro from "../assets/logo_libro.svg";
 ---
 
 <!-- banda únete -->
@@ -22,11 +23,7 @@ import data from "../data/footer.json";
 <footer class="bg-slate-950 text-white pt-16 pb-12 text-base font-medium">
   <div class="caixa flex flex-col gap-9 lg:flex-row lg:gap-6">
     <div class="flex-1">
-      <svg class="size-16 stroke-white" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"></path>
-        <path d="M16 8 2 22"></path>
-        <path d="M17.5 15H9"></path>
-      </svg>
+      <img src={logolibro.src} alt="" />
     </div>
     <div class="flex-1">
       <div class="font-bold font-display pb-2 text-xl">M8 por ler</div>
@@ -72,6 +69,25 @@ import data from "../data/footer.json";
           </svg>
         </a>
       </div>
+    </div>
+  </div>
+  <!-- Política -->
+  <div class="caixa flex flex-col gap-9 lg:flex-row lg:gap-6 pt-20">
+    <div class="flex-1">
+      <ul class="inline-flex gap-6">
+        {
+          data.politica.map((item) => (
+            <li>
+              <a class="text-slate-300 hover:text-slate-400" href={item.url}>
+                {item.tit}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div>
+      <span class="text-slate-300">Todos os dereitos reservados</span>
     </div>
   </div>
 </footer>

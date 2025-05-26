@@ -10,5 +10,10 @@
     { "tit": "Os nosos recomendados", "url": "/" },
     { "tit": "Os máis lidos", "url": "/" },
     { "tit": "Autores", "url": "/" }
+  ],
+    "politica": [
+    { "tit": "Política de privacidade", "url": "/" },
+    { "tit": "Política de Cookies", "url": "/" },
+    { "tit": "Termos e condicións", "url": "/" }
   ]
 }
