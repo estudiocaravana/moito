@@ -1,46 +1,54 @@
 ---
 import data from "../data/navbar.json";
 import logo from "../assets/logo.svg";
+import Buscar from "./Buscar.astro";
+const isIndex = Astro.url.pathname === "/";
 ---
 
-<header class="caixa py-6">
-  <nav class="flex items-center justify-between gap-20">
-    <!-- logo -->
-    <a href="/" aria-label="Inicio">
-      <img src={logo.src} alt="Moito por Ler" />
-    </a>
-    <!-- buscar -->
-    <div class="flex flex-1">
-      <input type="text" id="buscar" class="h-12 w-full max-w-[460px] text-slate-950 placeholder:text-slate-950 flex items-center border-slate-300 rounded-s-full pl-9 focus:z-10 focus:border-cyan-500 focus:ring-cyan-500" placeholder="Escribe o título ou autor que procuras" />
-      <button type="button" class="border-slate-300 h-12 pl-6 pr-9 flex items-center gap-2 rounded-e-full text-white bg-slate-950 hover:bg-slate-700 focus:outline-hidden focus:bg-slate-700">
-        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <path d="m21 21-4.3-4.3"></path>
-        </svg>
-        Buscar
-      </button>
-    </div>
-    <!-- páginas -->
-    <div>
-      <ul class="flex items-center gap-x-6 uppercase text-sm">
-        {
-          data.paginas.map((item) => (
-            <li>
-              <a href={item.url}>{item.tit}</a>
-            </li>
-          ))
-        }
-        <!-- usuario -->
-        <li>
-          <a href="#">
-            <svg class="size-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 20a6 6 0 0 0-12 0"></path>
-              <circle cx="12" cy="10" r="4"></circle>
-              <circle cx="12" cy="12" r="10"></circle>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
+<div class={isIndex ? "bg-teal-400" : ""}>
+  <header class="caixa py-6">
+    <nav class="flex items-center justify-between gap-20">
+      <!-- logo -->
+      <a href="/" aria-label="Inicio">
+        <img src={logo.src} alt="Moito por Ler" />
+      </a>
+      <!-- buscar -->
+      <div class="hidden lg:flex flex-1">
+        <Buscar />
+      </div>
+      <!-- páginas -->
+      <div class="flex gap-7 items-center">
+        <ul class="hidden xl:flex items-center gap-x-6 uppercase text-sm font-medium">
+          {
+            data.paginas.map((item) => (
+              <li>
+                <a class="hover:text-slate-700" href={item.url}>
+                  {item.tit}
+                </a>
+              </li>
+            ))
+          }
+          <!-- usuario -->
+        </ul>
+        <button class="inline-flex xl:hidden">
+          <svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+        </button>
+        <a class="hover:text-slate-700 inline-flex" href="#">
+          <svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 20a6 6 0 0 0-12 0"></path>
+            <circle cx="12" cy="10" r="4"></circle>
+            <circle cx="12" cy="12" r="10"></circle>
+          </svg>
+        </a>
+        <button class="inline-flex xl:hidden">
+          <svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 12h16"></path><path d="M4 18h16"></path><path d="M4 6h16"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+</div>

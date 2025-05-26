@@ -25,7 +25,7 @@ button {
   @apply transition-all duration-200;
 }
 .boton {
-  @apply shadow text-white h-12 flex items-center gap-3 px-10 rounded-full font-semibold focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none;
+  @apply shadow text-white pt-4 pb-5 max-w-sm flex items-center gap-3 px-10 rounded-full font-semibold focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none;
 }
 .boton.negro {
   @apply bg-slate-950 hover:bg-slate-800 focus:bg-slate-800;
@@ -35,6 +35,12 @@ button {
 }
 .boton.gris {
   @apply bg-slate-100 hover:bg-slate-200 focus:bg-slate-200 text-cyan-500;
+}
+.boton.blanco {
+  @apply px-6 bg-white hover:bg-slate-100 focus:bg-slate-100 font-medium text-slate-950 text-sm;
+}
+.boton.outline {
+  @apply px-6 border-1 border-white hover:border-slate-300 focus:border-slate-300 font-bold shadow-none text-sm;
 }
 
 @theme {
