@@ -1,6 +1,5 @@
 ---
 import data from "../data/navbar.json";
-import logo from "../assets/logo.svg";
 import Buscar from "./Buscar.astro";
 const isIndex = Astro.url.pathname === "/";
 ---
@@ -10,7 +9,7 @@ const isIndex = Astro.url.pathname === "/";
     <nav class="flex items-center justify-between gap-20">
       <!-- logo -->
       <a href="/" aria-label="Inicio">
-        <img src={logo.src} alt="Moito por Ler" />
+        <img src="/logo.svg" alt="Moito por Ler" />
       </a>
       <!-- buscar -->
       <div class="hidden lg:flex flex-1">

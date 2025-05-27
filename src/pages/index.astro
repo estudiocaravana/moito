@@ -1,9 +1,11 @@
 ---
-import data from "../data/ficha.json";
 import Layout from "../layouts/Layout.astro";
 import hero from "../assets/hero.png";
 import google from "../assets/google.svg";
 import apple from "../assets/apple.svg";
+import Actualidade from "../components/portada/Actualidade.astro";
+import Autor from "../components/portada/Autor.astro";
+import Temas from "../components/portada/Temas.astro";
 import Libros from "../components/Libros.astro";
 ---
 
@@ -14,7 +16,7 @@ import Libros from "../components/Libros.astro";
       <!-- Grid -->
       <div class="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-12 md:items-end xl:items-center">
         <div>
-          <h1 class="block text-4xl font-bold text-gray-800 sm:text-5xl lg:text-7xl max-w-xl">O maior catálogo do libro en galego</h1>
+          <h1 class="block text-4xl sm:text-5xl lg:text-7xl max-w-xl">O maior catálogo do libro <span class="text-white">en galego</span></h1>
           <p class="mt-6 text-lg text-gray-800 max-w-lg font-medium">Rexístrate en M8 por ler para crear as túas listaxes, seguir os teus autores favoritos, enterarte de tódalas novidades e acceder a sorteos exclusivos.</p>
 
           <!-- Buttons -->
@@ -38,11 +40,16 @@ import Libros from "../components/Libros.astro";
       </div>
     </div>
   </div>
-  <!-- End Hero -->
   <!-- Recomendados -->
+  <Libros titular="Recomendados" subtitular="Lorem ipsum dolor sit amet, consectetur adipisicing elit." enlace="Máis libros de esta listaxe" http="#" />
   <!-- Banner -->
+  <div class="caixa h-44 bg-slate-300 mt-32"></div>
   <!-- Novidades -->
+  <Libros titular="Novidades" subtitular="Lorem ipsum dolor sit amet, consectetur adipisicing elit." enlace="Máis libros de esta listaxe" http="#" />
   <!-- Temas -->
+  <Temas />
   <!-- Autor da semana -->
+  <Autor />
   <!-- Actualidade -->
+  <Actualidade />
 </Layout>

@@ -2,6 +2,7 @@
 @import "preline/variants.css";
 @source "../../node_modules/preline/dist/*.js";
 @plugin "@tailwindcss/forms";
+@import '@splidejs/splide/dist/css/splide.min.css';
 
 html {
   @apply scroll-smooth antialiased;
@@ -25,7 +26,7 @@ button {
   @apply transition-all duration-200;
 }
 .boton {
-  @apply shadow text-white pt-4 pb-5 max-w-sm flex items-center gap-3 px-10 rounded-full font-semibold focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none;
+  @apply shadow text-white pt-[10px] pb-[12px] max-w-sm flex items-center gap-3 px-10 rounded-full font-semibold focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none;
 }
 .boton.negro {
   @apply bg-slate-950 hover:bg-slate-800 focus:bg-slate-800;
@@ -46,4 +47,6 @@ button {
 @theme {
   --font-sans: "Manrope Variable", sans-serif;
   --font-display: "Oswald Variable", sans-serif;
+  --aspect-raiz: 1.4 / 1;
+  --aspect-libro: 1 / 1.8;
 }

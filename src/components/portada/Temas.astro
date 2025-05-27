@@ -1,0 +1,31 @@
+---
+// filepath: src/components/portada/Temas.astro
+import temas from "../../data/temas.json";
+---
+
+<div class="bg-cyan-200 pt-24 pb-32 mt-36 overflow-hidden">
+  <div class="caixa">
+    <h2 class="text-4xl lg:text-5xl font-bold text-gray-800">Os temas do momento</h2>
+    <div id="splide" class="splide mt-12">
+      <div class="splide__track !overflow-visible">
+        <ul class="splide__list">
+          {
+            temas.libros.map((tema) => (
+              <li class="splide__slide">
+                <a href="#" class="hover:text-cyan-500 block">
+                  <div class="aspect-square bg-white shadow mx-auto rounded-4xl">&nbsp;</div>
+                  <div class="pl-2 mt-4">
+                    <span class="font-bold block">{tema.tit}</span>
+                    <span class="text-base text-cyan-700">{tema.numero} libros catalogados</span>
+                  </div>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/src/scripts/init-splide.js"></script>

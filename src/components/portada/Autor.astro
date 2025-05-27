@@ -1,0 +1,51 @@
+---
+import imaxe from "../../assets/pedro/pedro.png";
+import pedro from "../../data/pedro.json";
+---
+
+<div class="caixa mt-36">
+  <div class="flex flex-col xl:flex-row gap-6 xl:gap-20">
+    <div class="">
+      <div class="relative mr-12 mb-12 max-w-xs xl:max-w-none">
+        <img src={imaxe.src} class="relative shadow-md z-20 rounded-br-[90px]" alt="Pedro Feijoo" />
+        <div class="absolute top-12 left-12 bg-cyan-200 w-full h-full z-0 rounded-br-[120px]"></div>
+      </div>
+    </div>
+    <div class="flex-1">
+      <div class="uppercase font-display text-slate-600">Autor da semana</div>
+      <h1 class="text-5xl text-cyan-500 mt-2">Pedro Feijoo</h1>
+      <p class="mt-6 text-gray-800 max-w-lg font-medium">Pedro Feijoo (Vigo, 1975) é escritor e músico. Deuse a coñecer como ensaísta co seu libro «Cousas do «Galicia», por Castelao» (1997), ao que seguiu a crónica «Viva o Fu Remol!» (Xerais, 2005) [...]</p>
+      <a href="#" class="font-bold block hover:text-slate-600 mt-5"
+        >Ver ficha completa
+        <svg class="size-5 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+      </a>
+      <!-- Libros -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 max-w-3xl">
+        {
+          pedro.libros.map((libro) => (
+            <div>
+              <a href="/libro" class="hover:text-cyan-500">
+                <div>
+                  <div class="aspect-libro flex items-end">
+                    <img class="shadow-md" src={`/src/assets/pedro/${libro.imaxe}.jpg`} alt="A brown dog sitting on a grassy field under a clear sky" />
+                  </div>
+                </div>
+                <div class="font-bold text-xl mt-4 leading-[1.3em]">{libro.tit}</div>
+                <div class="text-base text-slate-500 mt-1">Pedro Feijoo</div>
+                <div class="text-sm text-slate-500 flex items-center gap-1 mt-3">
+                  <div>
+                    <svg class="fill-cyan-500 size-4" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                    </svg>
+                  </div>
+                  <div class="font-bold text-cyan-500">{libro.nota}</div>
+                  <div class="border-l border-slate-300 ml-1 pl-2">254 seguidores</div>
+                </div>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>

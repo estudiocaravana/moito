@@ -1,0 +1,19 @@
+{
+  "novas": [
+    { "tit": "A novena edición dos Premios Follas Novas do Libro Galego xa ten os seus finalistas", 
+    "resumen": "O vindeiro 11 de maio daranse a coñecer as obras gañadoras no Teatro Principal de Santiago ao longo da historia do día das letras galegas.", 
+    "autor":"Begoña Xelmírez", 
+    "data": "15/04/2025", 
+    "imaxe": "1"},
+        { "tit": "A AGE regresa a Boloña con nove editoras desprazadas e un catálogo de dereitos", 
+    "resumen": "A AGE conta co apoio anual de CEDRO para participar neste evento, e este ano súmase a convocatoria o colectivo somos poucos e seremos menos.", 
+    "autor":"Ana Garrido", 
+    "data": "21/04/2025", 
+    "imaxe": "2"},
+        { "tit": "Mulleres de sempre. Campaña Día das Letras Galegas 2024", 
+    "resumen": "Con motivo do mes e do Día das Letras Galegas Fundación Xistral puxo en marcha unha nova campaña de promoción do libro galego.", 
+    "autor":"Xoan Vilanova", 
+    "data": "30/05/2025", 
+    "imaxe": "3"}
+  ]
+}

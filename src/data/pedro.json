@@ -1,0 +1,8 @@
+{
+  "libros": [
+    { "tit": "Un lume azul", "nota": "4.5", "imaxe": "1" },
+    { "tit": "Morena, perigosa e romántica", "nota": "4.6", "imaxe": "2" },
+    { "tit": "Sen piedade", "nota": "4.8", "imaxe": "3" },
+    { "tit": "Os fillos do mar", "nota": "4.2", "imaxe": "4" }
+  ]
+}
