@@ -1,0 +1,41 @@
+{
+  "premios": [
+    { "ano": "2024", "texto": "Premio nacional de las letras del Ministerio de cultura de España" },
+    { "ano": "2022", "texto": "Medalla de Oro al Mérito en las Bellas Artes del Ministerio de Cultura de España." },
+    { "ano": "2022", "texto": "Premio de Creación Literaria de Galicia por 'O que ﬁca fóra'." },
+    { "ano": "2022", "texto": "Premio Follas Novas de poesía por 'O que ﬁca fóra'." },
+    { "ano": "2019", "texto": "Premio Internacional de escritura en Lengua Materna (Ostana, Val del Po, Italia)." },
+    { "ano": "2016", "texto": "Premio Gala do Libro Galego (narrativa) por 'O último día de Terranova'." }
+  ],
+    "xeneros": [
+    { "tit": "Poesía", "url": "#" },
+    { "tit": "Narrativa", "url": "#" },
+    { "tit": "Ensayo", "url": "#" }
+  ],
+  "etiquetas": [
+    { "tit": "Galicia", "url": "#" },
+    { "tit": "Intriga", "url": "#" },
+    { "tit": "Salvaxe", "url": "#" },
+    { "tit": "Sociedade", "url": "#" },
+    { "tit": "Lectura lixeira", "url": "#" }
+  ],
+    "bio": [
+    { "parrafo": "Manuel Rivas Barrós, nado no barrio coruñés de Montealto o 26 de outubro de 1957, é un escritor, poeta, ensaísta e xornalista galego[1], membro de número da Real Academia Galega dende 2009.[2] A súa obra literaria está escrita orixinalmente en galego e é considerado na actualidade o escritor galego con máis proxección internacional,[3] a súa obra está traducida a vinte idiomas, entre eles o francés, italiano, inglés, alemán, grego, turco, ruso, finés, holandés, croata e xaponés.[4]"},
+    {"parrafo": "A súa obra narrativa, que abarca desde a novela á literatura infantil e xuvenil, pasando polo relato curto, o ensaio e a poesía, está marcada pola defensa da lingua galega e a denuncia social. A súa obra máis coñecida é a novela 'A lingua das bolboretas', que foi levada ao cine en 1999 por José Luis Cuerda. Outras obras destacadas son 'O lapis do carpinteiro', 'O último día de Terranova' e 'O que ﬁca fóra'."},
+    {"parrafo": "Rivas é un dos autores máis traducidos do galego e ten recibido numerosos premios, entre eles o Premio Nacional de Narrativa en 1996 por 'O lapis do carpinteiro', o Premio da Crítica Española en 1997 e o Premio da Crítica de Galicia en 1998. Ademais, foi galardoado co Premio Nacional de las Letras de España en 2024."}
+  ],
+      "libros": [
+    { "tit": "O lápis do carpinteiro", "nota": "4.6", "listado": "327", "imaxe":"1" },
+    { "tit": "Qué me queres amor?", "nota": "4.7", "listado": "436", "imaxe":"2" },
+    { "tit": "A lingua das bolboretas", "nota": "4.3", "listado": "367", "imaxe":"3" },
+    { "tit": "O último día de Terranova", "nota": "4.6", "listado": "193", "imaxe":"4" },
+    { "tit": "Todo é silencio", "nota": "4.7", "listado": "492", "imaxe":"5" },
+    { "tit": "Os libros arden mal", "nota": "4.2", "listado": "36", "imaxe":"6" },
+    { "tit": "As voces baixas", "nota": "4.6", "listado": "27", "imaxe":"7" },
+    { "tit": "Ela, maldita alma", "nota": "4.1", "listado": "183", "imaxe":"8" },
+    { "tit": "Un millón de vacas", "nota": "4.4", "listado": "294", "imaxe":"9" },
+    { "tit": "Tras do ceo", "nota": "4.6", "listado": "246", "imaxe":"10" },
+    { "tit": "As chamadas perdidas", "nota": "4.5", "listado": "395", "imaxe":"11" },
+    { "tit": "Os comedores de patacas", "nota": "4.6", "listado": "285", "imaxe":"12" }
+  ]
+}
