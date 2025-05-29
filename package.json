@@ -9,11 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/netlify": "^6.3.4",
     "@astrojs/vue": "^5.0.13",
     "@fontsource-variable/manrope": "^5.2.5",
     "@fontsource-variable/oswald": "^5.2.5",
     "@splidejs/splide": "^4.1.4",
-    "@tailwindcss/vite": "^4.1.7",
+    "@tailwindcss/vite": "^4.1.8",
     "astro": "^5.7.14",
     "preline": "^3.0.1",
     "swiper": "^11.2.8",
