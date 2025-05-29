@@ -7,8 +7,6 @@ import Resultados from "../components/libro/Resultados.astro";
 import Estrelas from "../components/Estrelas.astro";
 import AvatarGroup from "../components/libro/AvatarGroup.astro";
 import Libros from "../components/Libros.astro";
-import imaxe from "../assets/libro/portada-nena.jpg";
-import avatar from "../assets/libro/avatar.webp";
 ---
 
 <Layout>
@@ -16,7 +14,7 @@ import avatar from "../assets/libro/avatar.webp";
   <div class="caixa flex flex-col lg:flex-row gap-12 xl:gap-24 mt-6">
     <!-- COLUMNA IZQ -->
     <div class="flex-1 sm:w-[420px] sm:mx-auto lg:max-w-[300px]">
-      <img src={imaxe.src} class="shadow-md" alt="" />
+      <img src="/libro/portada-nena.jpg" class="shadow-md" alt="" />
       <div class="mt-9 text-center">
         <button type="button" class="boton azul mx-auto">
           Engadir a lista
@@ -131,7 +129,7 @@ import avatar from "../assets/libro/avatar.webp";
       <!-- autor -->
       <div class="flex flex-col sm:flex-row mt-24 gap-6 sm:gap-12">
         <div>
-          <img class="inline-block size-36 rounded-4xl" src={avatar.src} alt="Avatar" />
+          <img class="inline-block size-36 rounded-4xl" src="/libro/avatar.webp" alt="Avatar" />
         </div>
         <div class="flex-1">
           <h2 class="text-2xl text-cyan-500 pb-2">Manuel Rivas</h2>
