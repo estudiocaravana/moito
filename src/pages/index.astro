@@ -3,10 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import hero from "../assets/hero.png";
 import google from "../assets/google.svg";
 import apple from "../assets/apple.svg";
-import Actualidade from "../components/portada/Actualidade.astro";
 import Autor from "../components/portada/Autor.astro";
 import Temas from "../components/portada/Temas.astro";
 import Libros from "../components/Libros.astro";
+import Valoraciones from "../components/Valoraciones.astro";
 ---
 
 <Layout>
@@ -18,24 +18,29 @@ import Libros from "../components/Libros.astro";
         <div>
           <h1 class="block text-4xl sm:text-5xl lg:text-7xl max-w-xl">O maior catálogo do libro <span class="text-white">en galego</span></h1>
           <p class="mt-6 text-lg text-gray-800 max-w-lg font-medium">Rexístrate en M8 por ler para crear as túas listaxes, seguir os teus autores favoritos, enterarte de tódalas novidades e acceder a sorteos exclusivos.</p>
-
+          <div class="mt-3 font-medium text-white">Accede con:</div>
           <!-- Buttons -->
-          <div class="mt-9 mb-9 grid gap-3 w-full xl:inline-flex">
-            <a class="boton blanco" href="#">
+          <div class="mt-6 mb-9 gap-0.5 w-full inline-flex">
+            <a class="boton blanco !rounded-r-none" href="#">
               <img class="size-5" src={google.src} alt="" />
-              Accede con Google
+              <span class="hidden sm:inline-block">Google</span>
             </a>
-            <a class="boton blanco" href="#">
+            <a class="boton blanco !rounded-l-none" href="#">
               <img class="size-5" src={apple.src} alt="" />
-              Accede con Apple
+              <span class="hidden sm:inline-block">Apple</span>
             </a>
-            <a class="boton outline" href="#"> Accede con tu email </a>
+            <a class="boton outline ml-3 md:ml-6" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              </svg>
+              Email
+            </a>
           </div>
           <!-- End Buttons -->
         </div>
         <!-- derecha -->
-        <div class="relative md:ms-4">
-          <img class="w-full" src={hero.src} alt="Hero Image" />
+        <div class="relative md:ms-4 overflow-hidden">
+          <img class="w-full animate__animated animate__fadeInUp" style="--animate-duration: 2.2s;" src={hero.src} alt="Hero Image" />
         </div>
       </div>
     </div>
@@ -45,11 +50,10 @@ import Libros from "../components/Libros.astro";
   <!-- Banner -->
   <div class="caixa h-44 bg-slate-300 mt-32"></div>
   <!-- Novidades -->
-  <Libros titular="Novidades" subtitular="Lorem ipsum dolor sit amet, consectetur adipisicing elit." enlace="Máis libros de esta listaxe" http="#" />
+  <Valoraciones titular="As voces da nosa comunidade" />
   <!-- Temas -->
   <Temas />
   <!-- Autor da semana -->
   <Autor />
-  <!-- Actualidade -->
-  <Actualidade />
+  <!-- Actualidade (quitamos por ahora) -->
 </Layout>

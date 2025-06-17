@@ -37,5 +37,14 @@
     { "tit": "Tras do ceo", "nota": "4.6", "listado": "246", "imaxe":"10" },
     { "tit": "As chamadas perdidas", "nota": "4.5", "listado": "395", "imaxe":"11" },
     { "tit": "Os comedores de patacas", "nota": "4.6", "listado": "285", "imaxe":"12" }
+  ],
+      "letores": [
+    { "nome": "Mariví_77", "nota": "5", "imaxe":"1", "libro":"O lápis do carpinteiro" },
+    { "nome": "Paula Alonso", "nota": "4", "imaxe":"2", "libro":"Qué me queres amor?" },
+    { "nome": "Xosé Freire", "nota": "5", "imaxe":"3", "libro":"A lingua das bolboretas" },
+    { "nome": "Galegofalante18", "nota": "3", "imaxe":"4", "libro":"O último día de Terranova" },
+    { "nome": "Pepa", "nota": "5", "imaxe":"5", "libro":"Todo é silencio" },
+    { "nome": "Hermione_Gal", "nota": "4", "imaxe":"6", "libro":"Os libros arden mal" },
+    { "nome": "Paulina", "nota": "4", "imaxe":"7", "libro":"As voces baixas" }
   ]
 }

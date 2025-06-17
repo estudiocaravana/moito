@@ -15,6 +15,7 @@
     "@fontsource-variable/oswald": "^5.2.5",
     "@splidejs/splide": "^4.1.4",
     "@tailwindcss/vite": "^4.1.8",
+    "animate.css": "^4.1.1",
     "astro": "^5.7.14",
     "preline": "^3.0.1",
     "swiper": "^11.2.8",
