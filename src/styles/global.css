@@ -43,6 +43,9 @@ button {
 .boton.outline {
   @apply px-6 border-1 border-white hover:border-slate-300 focus:border-slate-300 font-bold shadow-none text-sm;
 }
+.boton.accede {
+  @apply size-12 px-0 flex justify-center lg:size-auto lg:px-6;
+}
 
 @theme {
   --font-sans: "Manrope Variable", sans-serif;

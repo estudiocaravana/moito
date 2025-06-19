@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
       breakpoints: {
         1024: { perPage: 5, arrows: false },
         768: { perPage: 3 },
-        480: { perPage: 1 },
+        480: { perPage: 2.5 },
+        400: { perPage: 1.5 },
       },
     }).mount();
   });
@@ -31,7 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     breakpoints: {
       1024: { perPage: 4 },
       768: { perPage: 3 },
-      480: { perPage: 2 },
+      480: { perPage: 2.5 },
+      400: { perPage: 1.5 },
     },
   }).mount();
 });
