@@ -1,12 +1,12 @@
 {
   "libros": [
-    { "tit": "Policíaca", "numero": "430"},
-    { "tit": "Romántica", "numero": "640"},
-    { "tit": "Ciencia Ficción", "numero": "497"},
-    { "tit": "Histórica", "numero": "108"},
-    { "tit": "Fantasía", "numero": "936"},
-    { "tit": "Terror", "numero": "492"},
-    { "tit": "Infantil", "numero": "492"},
-    { "tit": "Educación", "numero": "492"}
+    { "tit": "Policíaca", "numero": "430", "imaxe": "1"},
+    { "tit": "Romántica", "numero": "640", "imaxe": "2"},
+    { "tit": "Ciencia Ficción", "numero": "497", "imaxe": "3"},
+    { "tit": "Histórica", "numero": "108", "imaxe": "4"},
+    { "tit": "Fantasía", "numero": "936", "imaxe": "5"},
+    { "tit": "Terror", "numero": "492", "imaxe": "6"},
+    { "tit": "Infantil", "numero": "492", "imaxe": "7"},
+    { "tit": "Educación", "numero": "492", "imaxe": "8"}
   ]
 }

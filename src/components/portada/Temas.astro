@@ -3,7 +3,7 @@
 import temas from "../../data/temas.json";
 ---
 
-<div class="bg-cyan-200 pt-24 pb-32 mt-36 overflow-hidden">
+<div class="bg-cyan-200 pt-12 lg:pt-24 pb-16 lg:pb-32 mt-16 lg:mt-36 overflow-hidden">
   <div class="caixa">
     <div class="flex gap-4">
       <div>
@@ -20,10 +20,18 @@ import temas from "../../data/temas.json";
             temas.libros.map((tema) => (
               <li class="splide__slide">
                 <a href="#" class="hover:text-cyan-500 block">
-                  <div class="aspect-square bg-white shadow mx-auto rounded-4xl">&nbsp;</div>
+                  <div class="aspect-square bg-white shadow mx-auto rounded-4xl relative overflow-hidden">
+                    <img
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover min-h-full"
+                      src={`/temas/${tema.imaxe}.jpeg`}
+                      alt="A brown dog sitting on a grassy field under a clear sky, looking attentively forward, surrounded by trees in the background, calm and peaceful atmosphere"
+                    />
+                  </div>
                   <div class="pl-2 mt-4">
                     <span class="font-bold block">{tema.tit}</span>
-                    <span class="text-base text-cyan-700">{tema.numero} libros catalogados</span>
+                    <span class="text-base text-cyan-700">
+                      {tema.numero} libros <span class="hidden lg:inline">catalogados</span>
+                    </span>
                   </div>
                 </a>
               </li>

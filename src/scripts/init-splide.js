@@ -24,6 +24,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".valoracions").forEach((el) => {
+    new Splide(el, {
+      perPage: 6,
+      gap: "1.5rem",
+      pagination: false,
+      arrows: false,
+      breakpoints: {
+        1024: { perPage: 5 },
+        768: { perPage: 3 },
+        480: { perPage: 2.5 },
+        400: { perPage: 1.5 },
+      },
+    }).mount();
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   new Splide("#splide", {
     perPage: 5,
     gap: "2rem",

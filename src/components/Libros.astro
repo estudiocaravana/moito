@@ -6,7 +6,7 @@ const { enlace } = Astro.props;
 const { http } = Astro.props;
 ---
 
-<div class="caixa mt-32">
+<div class="caixa mt-16 lg:mt-32">
   <div class="flex gap-4">
     <div>
       <img class="size-10" src="/iconos/thumbs-up.svg" alt="" />
@@ -49,7 +49,7 @@ const { http } = Astro.props;
   <!-- Enlace si existe -->
   {
     enlace && (
-      <a href={http} class="font-bold block hover:text-slate-600 mt-12">
+      <a href={http} class="font-bold block hover:text-slate-600 mt-3 lg:mt-12">
         {enlace}
         <svg class="size-5 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="m9 18 6-6-6-6" />
