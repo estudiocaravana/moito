@@ -1,0 +1,60 @@
+<div class="inline-flex gap-0.5 rounded-lg hs-dropdown relative">
+  <!-- Estado inicial -->
+  <button type="button" class="boton azul !rounded-e-none !hidden"> Engadir a lectura pendente</button>
+  <!-- Estado en lista -->
+  <button type="button" class="boton gris !rounded-e-none !text-slate-950">
+    <svg class="fill-yellow-500 stroke-yellow-500 size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+    </svg>
+    Lectura pendente
+  </button>
+  <!-- boton dropdown -->
+  <button id="hs-dropdown-with-icons" type="button" class="hs-dropdown-toggle boton azul !rounded-s-none !pl-4 !pr-5" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </button>
+  <!-- dropdown -->
+  <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden sm:min-w-80 bg-slate-100 shadow-md rounded-lg mt-2 divide-y divide-gray-200" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-with-icons">
+    <div class="p-6 space-y-0.5">
+      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-white focus:outline-hidden focus:bg-white" href="#">
+        <svg class="fill-yellow-500 stroke-yellow-500 size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+        </svg>
+        Lectura pendente
+      </a>
+      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-white focus:outline-hidden focus:bg-white" href="#">
+        <svg class="fill-none stroke-cyan-500 size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+        </svg>
+        Lendo
+      </a>
+      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-white focus:outline-hidden focus:bg-white" href="#">
+        <svg class="fill-none stroke-green-500 size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+        </svg>
+        Lido
+      </a>
+      <hr class="py-3 block mt-6 border-slate-200" />
+      <!-- Listas personalizadas -->
+      <div class="flex items-center gap-x-2 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-white focus:outline-hidden focus:bg-white">
+        <input type="checkbox" id="custom-list" class="form-checkbox h-5 w-5 text-cyan-500 border-gray-300 rounded" />
+        <label for="custom-list" class="ml-2">Lista personalizada</label>
+      </div>
+      <div class="flex items-center gap-x-2 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-white focus:outline-hidden focus:bg-white">
+        <input type="checkbox" id="private-list" class="form-checkbox h-5 w-5 text-cyan-500 border-gray-300 rounded" />
+        <label for="private-list" class="ml-2">Lista privada</label>
+        <div class="ml-auto pl-12">
+          <svg class="stroke-current fill-none size-4 stroke-2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+      </div>
+      <button class="flex items-center text-base px-2 gap-4 mt-3 hover:text-slate-500">
+        <svg class="stroke-slate-800 size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"></path>
+          <path d="M12 5v14"></path>
+        </svg>
+        Engadir nova lista
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,13 @@
 {
   "libros": [
-    { "tit": "Curriño. O can influencer", "autor": "Ledicia Costas", "nota":"4.6", "veces":"74", "imaxe": "can" },
-    { "tit": "A botella de lentellas", "autor": "Leticia Barbadillo", "nota":"4.9", "veces":"123", "imaxe": "lentellas" },
-    { "tit": "Carrilanas bestiais", "autor": "Esteban Souto", "nota":"4.3", "veces":"47", "imaxe": "carrilanas" },
-    { "tit": "Nerea. A invasión dos trastos", "autor": "Pablo Prado, Miguel Rojo", "nota":"4.4", "veces":"129", "imaxe": "nerea" },
-    { "tit": "Dez gatiñas viaxeiras", "autor": "Eva Mejuto", "nota":"4.1", "veces":"192", "imaxe": "dez" },
-    { "tit": "A ladroa da biblioteca de Meirás", "autor": "Eva Mejuto", "nota":"4.7", "veces":"332", "imaxe": "ladroa" },
-    { "tit": "A nena lectora", "autor": "Manuel Rivas", "nota":"4.5", "veces":"250", "imaxe": "nena" },
-    { "tit": "Somos pandeireteiras", "autor": "Mercedes Peón", "nota":"4.3", "veces":"291", "imaxe": "somos" },
-    { "tit": "A falsa autónoma", "autor": "Yolanda Castaño", "nota":"4.7", "veces":"239", "imaxe": "falsa" }
+    { "tit": "Curriño. O can influencer", "autor": "Ledicia Costas", "nota":"4.6", "veces":"74", "imaxe": "can", "estado": "lido"},
+    { "tit": "A botella de lentellas", "autor": "Leticia Barbadillo", "nota":"4.9", "veces":"123", "imaxe": "lentellas" , "estado": "none"},
+    { "tit": "Carrilanas bestiais", "autor": "Esteban Souto", "nota":"4.3", "veces":"47", "imaxe": "carrilanas" , "estado": "pendente"},
+    { "tit": "Nerea. A invasión dos trastos", "autor": "Pablo Prado, Miguel Rojo", "nota":"4.4", "veces":"129", "imaxe": "nerea" , "estado": "none"},
+    { "tit": "Dez gatiñas viaxeiras", "autor": "Eva Mejuto", "nota":"4.1", "veces":"192", "imaxe": "dez" , "estado": "lendo"},
+    { "tit": "A ladroa da biblioteca de Meirás", "autor": "Eva Mejuto", "nota":"4.7", "veces":"332", "imaxe": "ladroa" , "estado": "none"},
+    { "tit": "A nena lectora", "autor": "Manuel Rivas", "nota":"4.5", "veces":"250", "imaxe": "nena" , "estado": "pendente"},
+    { "tit": "Somos pandeireteiras", "autor": "Mercedes Peón", "nota":"4.3", "veces":"291", "imaxe": "somos" , "estado": "none"},
+    { "tit": "A falsa autónoma", "autor": "Yolanda Castaño", "nota":"4.7", "veces":"239", "imaxe": "falsa" , "estado": "lido"}
 ]
 }

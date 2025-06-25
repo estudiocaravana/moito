@@ -25,7 +25,26 @@ const { http } = Astro.props;
               <a href="/libro" class="hover:text-cyan-500">
                 <div>
                   <div class=" aspect-[1/1.8] flex items-end">
-                    <img class="shadow-md transition-all duration-300 hover:mb-3" src={`/libros/${libro.imaxe}.jpg`} alt="A brown dog sitting on a grassy field under a clear sky, looking attentively forward, surrounded by trees in the background, calm and peaceful atmosphere" />
+                    <div class="relative">
+                      <img class="shadow-md transition-all duration-300 hover:mb-3" src={`/libros/${libro.imaxe}.jpg`} alt="A brown dog sitting on a grassy field under a clear sky, looking attentively forward, surrounded by trees in the background, calm and peaceful atmosphere" />
+                      <div class="absolute -top-3 right-3">
+                        {libro.estado === "pendente" && (
+                          <svg class="fill-yellow-500 stroke-white size-12" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+                          </svg>
+                        )}
+                        {libro.estado === "lendo" && (
+                          <svg class="fill-cyan-500 stroke-white size-12" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+                          </svg>
+                        )}
+                        {libro.estado === "lido" && (
+                          <svg class="fill-green-500 stroke-white size-12" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+                          </svg>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="font-bold lg:text-xl mt-4 leading-[1.3em]">{libro.tit}</div>

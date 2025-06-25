@@ -28,6 +28,9 @@ button {
 .boton {
   @apply shadow text-white pt-[10px] pb-[12px] max-w-sm flex items-center gap-3 px-10 rounded-full font-semibold focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none;
 }
+.noboton {
+  @apply shadow text-white pt-[10px] pb-[12px] max-w-sm items-center gap-3 px-10 rounded-full font-semibold focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none;
+}
 .boton.negro {
   @apply bg-slate-950 hover:bg-slate-800 focus:bg-slate-800;
 }
@@ -45,6 +48,12 @@ button {
 }
 .boton.accede {
   @apply size-12 px-0 flex justify-center lg:size-auto lg:px-6;
+}
+.botoncito {
+  @apply text-slate-400 bg-slate-100 hover:bg-slate-50 pt-[5px] pb-[7px] max-w-sm text-sm flex items-center gap-2 px-4 rounded-full focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none;
+}
+.botoncito.dos {
+  @apply border border-slate-200 text-slate-400 bg-transparent hover:bg-slate-100 focus:bg-slate-100;
 }
 
 @theme {
