@@ -5,10 +5,13 @@
 @import '@splidejs/splide/dist/css/splide.min.css';
 
 html {
-  @apply scroll-smooth antialiased;
+  @apply scroll-smooth antialiased bg-white;
 }
 body {
   @apply font-sans text-slate-950 text-lg leading-relaxed sm:leading-normal;
+}
+#navbar {
+  @apply transition-all duration-200;
 }
 .caixa {
   @apply mx-auto w-[90%] max-w-7xl relative;

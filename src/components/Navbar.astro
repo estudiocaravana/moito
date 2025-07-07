@@ -4,8 +4,8 @@ import Buscar from "./Buscar.astro";
 const isIndex = Astro.url.pathname === "/";
 ---
 
-<div class={isIndex ? "bg-teal-400" : ""}>
-  <header class="caixa py-6">
+<div id="navbar" class="fixed top-0 left-0 right-0 z-50">
+  <header class="w-[90%] max-w-7xl py-6 mx-auto">
     <nav class="flex items-center justify-between gap-20">
       <!-- logo -->
       <a href="/" aria-label="Inicio">
@@ -51,3 +51,17 @@ const isIndex = Astro.url.pathname === "/";
     </nav>
   </header>
 </div>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const navbar = document.getElementById("navbar");
+    if (!navbar) return;
+    if (window.scrollY > 30) {
+      navbar.classList.remove("bg-transparent");
+      navbar.classList.add("bg-white");
+    } else {
+      navbar.classList.remove("bg-white");
+      navbar.classList.add("bg-transparent");
+    }
+  });
+</script>
