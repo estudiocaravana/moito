@@ -2,10 +2,13 @@
 import data from "../../data/valoracions.json";
 ---
 
-<div class="flex flex-col gap-12 m8-opinions">
+<div
+  class="relative flex flex-col gap-12 m8-opinions transition-height duration-300 ease-in-out overflow-hidden"
+  style="height: 0px"
+>
   {
     data.opinions.map((item) => (
-      <div class="flex gap-12 pb-18 border-b border-slate-300 m8-opinion">
+      <div class="flex gap-12 pb-18 border-b border-slate-300">
         <div>
           <img
             class="inline-block size-18 rounded-full"
@@ -89,7 +92,7 @@ import data from "../../data/valoracions.json";
   // Número de opinións na páxina inicial
   const OPINIONS_PAXINA_INICIAL = 2;
   // Número de opinións por páxina
-  const OPINIONS_POR_PAXINA = 5;
+  const OPINIONS_POR_PAXINA = 1;
 
   // Páxina actual de opinións (0 para a primeira páxina)
   let paxinaActualOpinions = 0;
@@ -99,38 +102,62 @@ import data from "../../data/valoracions.json";
     element.textContent = OPINIONS_POR_PAXINA.toString();
   });
 
-  function actualizaPaxinaOpinions() {
-    // Mostramos as opinións na páxina actual,
-    // tendo en conta que a primeira páxina ten o seu paxinado propio
-    const indexLimite =
-      OPINIONS_PAXINA_INICIAL + paxinaActualOpinions * OPINIONS_POR_PAXINA;
+  // Calculamos o índice da seguinte páxina de opinións
+  // tendo en conta que a primeira páxina ten o seu paxinado propio
+  function obtenIndicePaxinaSeguinte() {
+    return OPINIONS_PAXINA_INICIAL + paxinaActualOpinions * OPINIONS_POR_PAXINA;
+  }
 
-    document.querySelectorAll(".m8-opinions").forEach((element) => {
-      const opiniones = element.querySelectorAll(".m8-opinion");
-      opiniones.forEach((opinion, index) => {
-        // Ocultamos as opinións que estean despois da páxina actual
-        if (index >= indexLimite) {
-          opinion.classList.add("hidden");
-        } else {
-          opinion.classList.remove("hidden");
-        }
-      });
+  document.querySelectorAll(".m8-opinions").forEach((contedor) => {
+    const opinions = contedor.children;
 
-      // Se non quedan máis páxinas, ocultamos o botón de "Ver máis"
-      if (indexLimite >= opiniones.length) {
+    // Ocultamos o botón de "Ver máis" xusto despois rematar a animación
+    contedor.addEventListener("transitionend", () => {
+      if (obtenIndicePaxinaSeguinte() >= opinions.length) {
         document.querySelectorAll(".m8-opinions-verMais").forEach((element) => {
           element.classList.add("hidden");
         });
-      } else {
-        document.querySelectorAll(".m8-opinions-verMais").forEach((element) => {
-          element.classList.remove("hidden");
-        });
       }
+    });
+  });
+
+  function actualizaPaxinaOpinions() {
+    const indicePaxinaSeguinte = obtenIndicePaxinaSeguinte();
+
+    document.querySelectorAll(".m8-opinions").forEach((contedor) => {
+      const contedorElement = contedor as HTMLElement;
+      const opinions = contedor.children;
+      let indiceUltimaOpinionAMostrar = 0;
+
+      // Modificamos a altura do contedor para poder facer a animación.
+      // E, para iso, calculamos a altura do contedor para que o botón
+      // de "Ver máis" se sitúe xusto debaixo da liña da última opinión visible
+
+      if (indicePaxinaSeguinte >= opinions.length) {
+        indiceUltimaOpinionAMostrar = opinions.length - 1;
+      } else {
+        indiceUltimaOpinionAMostrar = indicePaxinaSeguinte - 1;
+      }
+
+      const ultimaOpinionAMostrar = opinions[
+        indiceUltimaOpinionAMostrar
+      ] as HTMLElement;
+      const alturaContedor =
+        ultimaOpinionAMostrar.offsetTop + ultimaOpinionAMostrar.offsetHeight;
+
+      contedorElement.style.height = `${alturaContedor}px`;
     });
   }
 
-  // Inicializamos a páxina de opinións
-  actualizaPaxinaOpinions();
+  addEventListener("load", (event) => {
+    // Inicializamos a páxina de opinións cando se carga a páxina
+    actualizaPaxinaOpinions();
+  });
+
+  // Recaltulamos as posicións ao redimensionar a ventá do navegador
+  addEventListener("resize", (event) => {
+    actualizaPaxinaOpinions();
+  });
 
   // Ao clickar no botón "Ver máis", motramos máis opinións
   document
