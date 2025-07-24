@@ -1,0 +1,145 @@
+---
+import data from "../data/usuario.json";
+import Layout from "../layouts/Layout.astro";
+import Migas from "../components/libro/Migas.astro";
+import Valoraciones from "../components/Valoraciones.astro";
+---
+
+<Layout>
+  <Migas />
+  <div class="caixa flex flex-col lg:flex-row gap-12 xl:gap-24 mt-6">
+    <!-- COLUMNA IZQ -->
+    <div class="flex-1 sm:w-[420px] sm:mx-auto lg:max-w-[300px]">
+      <img src="/public/letores/paula.webp" class="shadow-md rounded-3xl" alt="" />
+    </div>
+    <!-- COLUMNA DRCH -->
+    <div class="flex-1">
+      <div class="flex flex-col gap-6 lg:flex-row justify-between">
+        <div>
+          <h1 class="text-4xl lg:text-5xl">Paula Alonso</h1>
+          <div class="text-slate-400 mt-3">A Coruña | Uniuse en Marzo de 2025</div>
+        </div>
+        <div>
+          <button type="button" class="boton azul">
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+            </svg>
+            Seguir
+          </button>
+        </div>
+      </div>
+      <!-- botóns estados dos libros -->
+      <div class="flex flex-col sm:flex-row gap-6 mt-9">
+        <div>
+          <button type="button" class="boton gris !text-slate-900">
+            <svg class="pendente size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+            </svg>
+            14 Pendentes
+          </button>
+        </div>
+        <div>
+          <button type="button" class="boton gris !text-slate-900">
+            <svg class="lendo size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+            </svg>
+            2 Lendo
+          </button>
+        </div>
+        <div>
+          <button type="button" class="boton gris !text-slate-900">
+            <svg class="lido size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+            </svg>
+            85 Lidos
+          </button>
+        </div>
+      </div>
+      <!-- descrición -->
+      <div class="mt-9 space-y-3 max-w-lg">
+        <p>Apaixonada polos libros, soñadora entre páxinas e sempre na procura dunha nova historia.</p>
+      </div>
+      <!-- seguidores, seguidos, valoraciones -->
+      <div class="mt-9 text-base text-slate-500 font-bold">
+        <div class="flex items-baseline gap-1">
+          68 <div class="text-sm font-normal">seguidores</div>
+          <div class="border-l border-slate-400 h-4 mx-2"></div>
+          18 <div class="text-sm font-normal">seguidos</div>
+          <div class="border-l border-slate-400 h-4 mx-2"></div>
+          8 <div class="text-sm font-normal">valoraciones</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIN DE COLUMNAS -->
+
+  <div class="caixa">
+    <!-- Listas -->
+    <div class="w-full flex gap-12">
+      {
+        data.listas.map((lista) => (
+          <div class="panel flex-1">
+            {/* Título */}
+            <div class="flex gap-3">
+              <svg class={`${lista.ico} size-9`} viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+              </svg>
+              <div class="flex items-baseline gap-4">
+                <h2 class="text-2xl">{lista.estado}</h2>
+                <a class="text-slate-400 underline underline-offset-4" href="#">
+                  {lista.titulos} Títulos
+                </a>
+              </div>
+            </div>
+            {/* libros */}
+            <div class="flex overflow-hidden *:max-h-44 *:-mr-6">
+              {lista.portadas.map((libro) => (
+                <div class="aspect-[1/1.8] flex items-end">
+                  <div class="relative">
+                    <img class="shadow-md transition-all duration-300 hover:mb-3" src={`/libros/${libro.portada}.jpg`} alt={libro.portada} />
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* Enlace */}
+            <a class="text-cyan-500 underline underline-offset-4 text-sm mt-6 block" href="#">
+              Ver lista completa
+            </a>
+          </div>
+        ))
+      }
+    </div>
+    <!-- Outras listas -->
+    <div class="panel">
+      <div class="flex gap-3">
+        <svg class="fill-slate-900 stroke-slate-900 size-9" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+        </svg>
+        <h2 class="text-2xl mb-6">Outras listas de Paula Alonso</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-base gap-6 mt-3">
+        {
+          data.outras_listas.map((lista) => (
+            <div>
+              <div class="font-semibold">{lista.tit}</div>
+              <a class="text-slate-400 underline underline-offset-4" href="#">
+                {lista.num} Títulos
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Actividade -->
+  <div class="caixa mt-36">
+    <h2 class="text-4xl">Actvidade recente</h2>
+    <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-6 mt-6"></div>
+  </div>
+  <div class="bg-slate-100 pb-24 mt-24">
+    <!-- Valoraciones da comunidade -->
+    <Valoraciones titular="Qué di a comunidade dos libros de Manuel Rivas?" />
+  </div>
+</Layout>

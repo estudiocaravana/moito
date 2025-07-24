@@ -1,0 +1,24 @@
+{
+  "listas": [
+    { "estado": "Pendentes", "ico":"pendente", "titulos": "14", "portadas": [
+      { "portada": "can" },
+      { "portada": "dez" },
+      { "portada": "falsa"}
+    ] },
+    { "estado": "Lendo", "ico":"lendo", "titulos": "8", "portadas": [
+      { "portada": "nena" },
+      { "portada": "nerea" },
+      { "portada": "lentellas"}
+    ] },
+    { "estado": "Lido", "ico":"lido", "titulos": "2", "portadas": [
+      { "portada": "somos" },
+      { "portada": "ladroa" }
+    ] }
+  ],
+    "outras_listas": [
+    { "tit": "Agasallos para Pedro", "num":"14"},
+    { "tit": "Libros para o verán", "num":"4"},
+    { "tit": "Grandes clásicos", "num":"5"},
+    { "tit": "Recomendacións de Antía", "num":"2"}
+  ]
+}
