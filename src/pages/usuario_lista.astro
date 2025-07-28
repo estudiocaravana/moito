@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Migas from "../components/libro/Migas.astro";
+import BotonListas from "../components/libro/BotonListas.astro";
+import data from "../data/libros.json";
+---
+
+<Layout>
+  <Migas />
+  <div class="caixa flex flex-col xl:flex-row gap-3 xl:gap-12 mt-6">
+    <!-- COLUMNA IZQ -->
+    <div class="xl:mx-auto">
+      <img src="/letores/paula.webp" class="shadow-md rounded-4xl size-[110px] z-10 relative" alt="" />
+      <svg class="pendente size-24 ml-2 xl:mx-auto -mt-6 z-0 relative" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+      </svg>
+    </div>
+    <!-- COLUMNA DRCH -->
+    <div class="flex-1">
+      <!-- Encabezado -->
+      <div>
+        <div class="text-2xl font-bold font-display">Paula Alonso</div>
+        <h1 class="text-4xl text-yellow-500">Pendentes</h1>
+        <div class="mt-2 text-base">14 títulos</div>
+      </div>
+      <!-- Listado -->
+      <div class="relative flex flex-col gap-9 border-t border-slate-300 m8-opinions transition-height duration-300 ease-in-out overflow-hidden mt-12">
+        <!-- separador -->
+        <div></div>
+        <!-- Libro -->
+
+{data.libros.map((libro) => (
+  <div class="flex flex-col lg:flex-row gap-3 xl:gap-12 pb-9 border-b border-slate-300">
+    <div>
+      <img class="inline-block w-32 shadow-md" src={`/libros/${libro.imaxe}.jpg`} alt={libro.tit} />
+    </div>
+    <!-- Titulo -->
+    <div>
+      <div class="flex space-between items-start">
+        <div class="flex-1">
+          <div class="font-bold text-2xl py-1 max-w-[170px]">{libro.tit}</div>
+          <div class="text-slate-500 text-sm pb-2">{libro.autor}</div>
+        </div>
+      </div>
+      <!-- Data -->
+      <div class="text-sm text-slate-500 flex items-center gap-1 lg:mt-6">
+        <div>
+          <svg class="fill-cyan-500 size-4" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+            ></path>
+          </svg>
+        </div>
+        <div class="font-bold text-cyan-500">{libro.nota}</div>
+        <div class="border-l border-slate-300 ml-1 pl-2">{libro.veces} listado</div>
+      </div>
+    </div>
+    <div class="flex-1 text-base text-slate-700 text-justify">
+            <div class="pb-6 lg:pb-0 lg:px-6 max-w-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id est vitae quam ultrices aliquam et non lectus. Quisque venenatis cursus facilisis. Nulla blandit mollis fermentum. Nam magna turpis...</div>
+    </div>
+    <div>
+      <BotonListas estado={libro.estado} />
+    </div>
+  </div>
+))}
+      </div>
+      <!-- Paginador -->
+      <nav class="flex items-center gap-x-1 mt-12 justify-center" aria-label="Pagination">
+        <button type="button" class="ant_seg" aria-label="Previous" disabled="">
+          <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6"></path>
+          </svg>
+          <span class="hidden sm:block">anterior</span>
+        </button>
+        <div class="flex items-center gap-x-1">
+          <button type="button" class="pagina current" aria-current="page">1</button>
+          <button type="button" class="pagina">2</button>
+          <button type="button" class="pagina">3</button>
+          <div>...</div>
+          <button type="button" class="pagina">12</button>
+        </div>
+        <button type="button" class="ant_seg" aria-label="Next">
+          <span class="hidden sm:block">seguinte</span>
+          <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 18 6-6-6-6"></path>
+          </svg>
+        </button>
+      </nav>
+      <div class="text-center mt-6 text-base">1 - 20 de 2.514 títulos</div>
+      <!-- End Pagination -->
+    </div><!-- /COLUMNA DRCH -->
+  </div><!-- /CAIXA -->
+</Layout>

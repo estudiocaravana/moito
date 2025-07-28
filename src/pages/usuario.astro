@@ -2,7 +2,7 @@
 import data from "../data/usuario.json";
 import Layout from "../layouts/Layout.astro";
 import Migas from "../components/libro/Migas.astro";
-import Valoraciones from "../components/Valoraciones.astro";
+import Actividade from "../components/usuario/actividade.astro";
 ---
 
 <Layout>
@@ -10,7 +10,7 @@ import Valoraciones from "../components/Valoraciones.astro";
   <div class="caixa flex flex-col lg:flex-row gap-12 xl:gap-24 mt-6">
     <!-- COLUMNA IZQ -->
     <div class="flex-1 sm:w-[420px] sm:mx-auto lg:max-w-[300px]">
-      <img src="/public/letores/paula.webp" class="shadow-md rounded-3xl" alt="" />
+      <img src="/letores/paula.webp" class="shadow-md rounded-3xl" alt="" />
     </div>
     <!-- COLUMNA DRCH -->
     <div class="flex-1">
@@ -20,12 +20,30 @@ import Valoraciones from "../components/Valoraciones.astro";
           <div class="text-slate-400 mt-3">A Coruña | Uniuse en Marzo de 2025</div>
         </div>
         <div>
-          <button type="button" class="boton azul">
+          <button id="btn-seguir" type="button" class="boton azul flex items-center gap-2">
             <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
             </svg>
-            Seguir
+            <span>Seguir</span>
           </button>
+
+          <script>
+            const btn = document.getElementById("btn-seguir");
+            if (btn) {
+              btn.addEventListener("click", function () {
+                const span = btn.querySelector("span");
+                if (btn.classList.contains("azul")) {
+                  btn.classList.remove("azul");
+                  btn.classList.add("gris");
+                  if (span) span.textContent = "Siguiendo";
+                } else {
+                  btn.classList.remove("gris");
+                  btn.classList.add("azul");
+                  if (span) span.textContent = "Seguir";
+                }
+              });
+            }
+          </script>
         </div>
       </div>
       <!-- botóns estados dos libros -->
@@ -76,7 +94,7 @@ import Valoraciones from "../components/Valoraciones.astro";
 
   <div class="caixa">
     <!-- Listas -->
-    <div class="w-full flex gap-12">
+    <div class="w-full flex flex-col lg:flex-row gap-12">
       {
         data.listas.map((lista) => (
           <div class="panel flex-1">
@@ -87,7 +105,7 @@ import Valoraciones from "../components/Valoraciones.astro";
               </svg>
               <div class="flex items-baseline gap-4">
                 <h2 class="text-2xl">{lista.estado}</h2>
-                <a class="text-slate-400 underline underline-offset-4" href="#">
+                <a class="text-slate-400 hover:text-slate-300 underline underline-offset-4" href="/usuario_lista">
                   {lista.titulos} Títulos
                 </a>
               </div>
@@ -103,7 +121,7 @@ import Valoraciones from "../components/Valoraciones.astro";
               ))}
             </div>
             {/* Enlace */}
-            <a class="text-cyan-500 underline underline-offset-4 text-sm mt-6 block" href="#">
+            <a class="text-cyan-500 hover:text-cyan-400 underline underline-offset-4 text-sm mt-6 block" href="/usuario_lista">
               Ver lista completa
             </a>
           </div>
@@ -133,13 +151,6 @@ import Valoraciones from "../components/Valoraciones.astro";
     </div>
   </div>
 
-  <!-- Actividade -->
-  <div class="caixa mt-36">
-    <h2 class="text-4xl">Actvidade recente</h2>
-    <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-6 mt-6"></div>
-  </div>
-  <div class="bg-slate-100 pb-24 mt-24">
-    <!-- Valoraciones da comunidade -->
-    <Valoraciones titular="Qué di a comunidade dos libros de Manuel Rivas?" />
-  </div>
+  <!-- Actividade recente -->
+  <Actividade />
 </Layout>
