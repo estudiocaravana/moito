@@ -1,8 +1,8 @@
 {
   "paginas": [
-    { "tit": "libros", "url": "/libros" },
-    { "tit": "autores", "url": "/autores" },
-    { "tit": "editoriais", "url": "/editoriais" }
+    { "tit": "libros", "url": "/categoria" },
+    { "tit": "autores", "url": "/categoria" },
+    { "tit": "editoriais", "url": "/categoria" }
   ],
   "migas": [
     { "tit": "Inicio", "url": "/" },
