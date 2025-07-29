@@ -1,6 +1,6 @@
 {
   "paginas": [
-    { "tit": "libros e publicacións", "url": "/libros" },
+    { "tit": "libros", "url": "/libros" },
     { "tit": "autores", "url": "/autores" },
     { "tit": "editoriais", "url": "/editoriais" }
   ],

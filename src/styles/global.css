@@ -59,7 +59,7 @@ button {
   @apply border border-slate-200 text-slate-400 bg-transparent hover:bg-slate-100 focus:bg-slate-100;
 }
 .panel {
-  @apply mt-20 bg-slate-100 rounded-4xl p-6 sm:p-12 shadow;
+  @apply mt-6 lg:mt-20 bg-slate-100 rounded-4xl p-6 sm:p-12 shadow;
 }
 svg.pendente {
   @apply fill-yellow-500 stroke-yellow-500;

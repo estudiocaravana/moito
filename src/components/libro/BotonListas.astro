@@ -2,18 +2,18 @@
   <!-- Estado inicial -->
   <button type="button" class="boton azul !rounded-e-none !hidden"> Engadir a pendente</button>
   <!-- Estado en lista -->
-  <button type="button" class="boton gris !rounded-e-none !text-slate-950">
+  <button type="button" class="boton gris !rounded-e-none !text-slate-950 relative z-10">
     <svg class="fill-yellow-500 stroke-yellow-500 size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
       <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
     </svg>
     Pendente
   </button>
   <!-- boton dropdown -->
-  <button id="hs-dropdown-with-icons" type="button" class="hs-dropdown-toggle boton azul !rounded-s-none !pl-4 !pr-5" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" data-hs-dropdown-auto-close="inside">
+  <button id="hs-dropdown-with-icons" type="button" class="hs-dropdown-toggle boton azul !rounded-s-none !pl-4 !pr-5 relative z-10" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" data-hs-dropdown-auto-close="inside">
     <svg class="hs-dropdown-open:rotate-180" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
   </button>
   <!-- dropdown -->
-  <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden sm:min-w-80 bg-slate-100 shadow-md rounded-lg mt-2 divide-y divide-gray-200" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-with-icons">
+  <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden sm:min-w-80 bg-slate-100 shadow-md rounded-lg mt-2 divide-y divide-gray-200 relative z-20" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-with-icons">
     <div class="p-6 space-y-0.5">
       <button class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-white focus:outline-hidden focus:bg-white w-full">
         <svg class="fill-yellow-500 stroke-yellow-500 size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">

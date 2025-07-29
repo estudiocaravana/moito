@@ -2,7 +2,8 @@
 import data from "../data/usuario.json";
 import Layout from "../layouts/Layout.astro";
 import Migas from "../components/libro/Migas.astro";
-import Actividade from "../components/usuario/actividade.astro";
+import Actividade_comunidade from "../components/usuario/actividade_comunidade.astro";
+import AvatarGroup from "../components/libro/AvatarGroup.astro";
 ---
 
 <Layout>
@@ -10,7 +11,14 @@ import Actividade from "../components/usuario/actividade.astro";
   <div class="caixa flex flex-col lg:flex-row gap-12 xl:gap-24 mt-6">
     <!-- COLUMNA IZQ -->
     <div class="flex-1 sm:w-[420px] sm:mx-auto lg:max-w-[300px]">
-      <img src="/letores/paula.webp" class="shadow-md rounded-3xl" alt="" />
+      <div class="relative">
+        <img src="/letores/paula.webp" class="shadow-md rounded-3xl" alt="" />
+        <button class="absolute bottom-3 start-3 bg-white rounded-full p-2 shadow-md hover:bg-slate-100 transition-colors">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path>
+          </svg>
+        </button>
+      </div>
     </div>
     <!-- COLUMNA DRCH -->
     <div class="flex-1">
@@ -20,30 +28,12 @@ import Actividade from "../components/usuario/actividade.astro";
           <div class="text-slate-400 mt-3">A Coruña | Uniuse en Marzo de 2025</div>
         </div>
         <div>
-          <button id="btn-seguir" type="button" class="boton azul flex items-center gap-2">
+          <button type="button" class="boton gris !text-slate-700 flex items-center gap-2">
             <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+              <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path>
             </svg>
-            <span>Seguir</span>
+            <span>Editar perfil</span>
           </button>
-
-          <script>
-            const btn = document.getElementById("btn-seguir");
-            if (btn) {
-              btn.addEventListener("click", function () {
-                const span = btn.querySelector("span");
-                if (btn.classList.contains("azul")) {
-                  btn.classList.remove("azul");
-                  btn.classList.add("gris");
-                  if (span) span.textContent = "Siguiendo";
-                } else {
-                  btn.classList.remove("gris");
-                  btn.classList.add("azul");
-                  if (span) span.textContent = "Seguir";
-                }
-              });
-            }
-          </script>
         </div>
       </div>
       <!-- botóns estados dos libros -->
@@ -77,14 +67,15 @@ import Actividade from "../components/usuario/actividade.astro";
       <div class="mt-9 space-y-3 max-w-lg">
         <p>Apaixonada polos libros, soñadora entre páxinas e sempre na procura dunha nova historia.</p>
       </div>
-      <!-- seguidores, seguidos, valoraciones -->
-      <div class="mt-9 text-base text-slate-500 font-bold">
-        <div class="flex items-baseline gap-1">
-          68 <div class="text-sm font-normal">seguidores</div>
-          <div class="border-l border-slate-400 h-4 mx-2"></div>
-          18 <div class="text-sm font-normal">seguidos</div>
-          <div class="border-l border-slate-400 h-4 mx-2"></div>
-          8 <div class="text-sm font-normal">valoraciones</div>
+      <!-- seguidores, seguidos -->
+      <div class="flex flex-col sm:flex-row gap-9 sm:gap-12 mt-12 text-slate-500 font-bold">
+        <div class="flex items-center gap-4">
+          <AvatarGroup />
+          <div>68 <div class="text-sm font-normal inline-block">seguidores</div></div>
+        </div>
+        <div class="flex items-center gap-4">
+          <AvatarGroup />
+          <div>18 <div class="text-sm font-normal inline-block">seguidos</div></div>
         </div>
       </div>
     </div>
@@ -93,7 +84,19 @@ import Actividade from "../components/usuario/actividade.astro";
   <!-- FIN DE COLUMNAS -->
 
   <div class="caixa">
-    <!-- Listas -->
+    <!-- Encabezado -->
+    <div class="flex flex-col sm:flex-row gap-6 sm:gap-12 mt-20">
+      <div><h2 class="text-4xl">As túas listas</h2></div>
+      <div>
+        <a href="/cuenta_libros" class="boton azul flex items-center gap-2">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+          </svg>
+          <span>Ver todos os teus libros</span>
+        </a>
+      </div>
+    </div>
+    <!-- Listas en paneles -->
     <div class="w-full flex flex-col lg:flex-row gap-0 lg:gap-12">
       {
         data.listas.map((lista) => (
@@ -128,15 +131,22 @@ import Actividade from "../components/usuario/actividade.astro";
         ))
       }
     </div>
-    <!-- Outras listas -->
+    <!-- listas personalizadas -->
     <div class="panel">
-      <div class="flex gap-3">
+      <div class="flex gap-3 items-center">
         <svg class="fill-slate-900 stroke-slate-900 size-9" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
           <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
         </svg>
-        <h2 class="text-2xl mb-6">Outras listas de Paula Alonso</h2>
+        <h2 class="text-2xl flex-1">As túas listas personalizadas</h2>
+        <button class="uppercase text-sm font-semibold hover:text-slate-700">
+          <svg class="fill-slate-900 stroke-slate-900 size-4 inline-block" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="M12 5v14"></path>
+          </svg>
+          Engadir nova lista
+        </button>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-base gap-6 mt-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-base gap-6 mt-6">
         {
           data.outras_listas.map((lista) => (
             <div>
@@ -152,5 +162,5 @@ import Actividade from "../components/usuario/actividade.astro";
   </div>
 
   <!-- Actividade recente -->
-  <Actividade />
+  <Actividade_comunidade />
 </Layout>
