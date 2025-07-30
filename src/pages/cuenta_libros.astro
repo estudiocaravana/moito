@@ -5,6 +5,7 @@ import Migas from "../components/libro/Migas.astro";
 import BotonListas from "../components/libro/BotonListas.astro";
 import data from "../data/libros.json";
 import Estrelas from "../components/Estrelas.astro";
+import Paginador from "../components/paginador.astro";
 ---
 
 <Layout>
@@ -35,16 +36,16 @@ import Estrelas from "../components/Estrelas.astro";
               </svg>
             </button>
             <div
-              class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-30"
+              class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-slate-100 shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-30"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="hs-dropdown-default"
             >
               <div class="p-1 space-y-0.5">
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100" href="#">Opción 1</a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100" href="#">Opción 2</a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100" href="#">Opción 3</a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100" href="#">Opción 4</a>
+                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-slate-200 focus:outline-hidden focus:bg-slate-200" href="#">Opción 1</a>
+                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-slate-200 focus:outline-hidden focus:bg-slate-200" href="#">Opción 2</a>
+                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-slate-200 focus:outline-hidden focus:bg-slate-200" href="#">Opción 3</a>
+                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-slate-200 focus:outline-hidden focus:bg-slate-200" href="#">Opción 4</a>
               </div>
             </div>
           </div>
@@ -130,29 +131,7 @@ import Estrelas from "../components/Estrelas.astro";
           ))
         }
       </div>
-      <!-- Paginador -->
-      <nav class="flex items-center gap-x-1 mt-12 justify-center" aria-label="Pagination">
-        <button type="button" class="ant_seg" aria-label="Previous" disabled="">
-          <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m15 18-6-6 6-6"></path>
-          </svg>
-          <span class="hidden sm:block">anterior</span>
-        </button>
-        <div class="flex items-center gap-x-1">
-          <button type="button" class="pagina current" aria-current="page">1</button>
-          <button type="button" class="pagina">2</button>
-          <button type="button" class="pagina">3</button>
-          <div>...</div>
-          <button type="button" class="pagina">12</button>
-        </div>
-        <button type="button" class="ant_seg" aria-label="Next">
-          <span class="hidden sm:block">seguinte</span>
-          <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m9 18 6-6-6-6"></path>
-          </svg>
-        </button>
-      </nav>
-      <div class="text-center mt-6 text-base">1 - 20 de 2.514 títulos</div>
+      <Paginador />
       <!-- End Pagination -->
     </div>
     <!-- /COLUMNA DRCH -->
