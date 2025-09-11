@@ -34,8 +34,29 @@ import Paginador from "../components/paginador.astro";
         </div>
         <!-- derecha -->
         <div class="relative overflow-hidden flex-1 font-semibold">
-          <p></p>Mundos estraños, robots, futuros imposibles... A ciencia ficción é o lugar perfecto para imaxinar e pensar ao mesmo tempo. Nesta categoría atoparás libros para todos os gustos: aventuras espaciais, distopías, máquinas con sentimentos e moito máis. Historias que te farán reflexionar
-          sobre o futuro e a condición humana, todo desde a maxia das palabras. Se che gusta soñar con mundos novos e explorar o que aínda está por vir, esta é a túa sección.
+          <p>
+            Mundos estraños, robots, futuros imposibles... A ciencia ficción é o lugar perfecto para imaxinar e pensar ao mesmo tempo.
+            <div id="hs-show-hide-collapse-heading" class="hs-collapse hidden sm:inline w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-show-hide-collapse">
+              Nesta categoría atoparás libros para todos os gustos: aventuras espaciais, distopías, máquinas con sentimentos e moito máis. Historias que te farán reflexionar sobre o futuro e a condición humana, todo desde a maxia das palabras. Se che gusta soñar con mundos novos e explorar o que
+              aínda está por vir, esta é a túa sección.
+            </div>
+          </p>
+          <p class="mt-2 sm:hidden">
+            <button
+              type="button"
+              class="hs-collapse-toggle inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-cyan-100 decoration-2 hover:text-cyan-200 hover:underline focus:outline-hidden focus:underline focus:text-cyan-200 disabled:opacity-50 disabled:pointer-events-none"
+              id="hs-show-hide-collapse"
+              aria-expanded="false"
+              aria-controls="hs-show-hide-collapse-heading"
+              data-hs-collapse="#hs-show-hide-collapse-heading"
+            >
+              <span class="hs-collapse-open:hidden">Ler máis</span>
+              <span class="hs-collapse-open:block hidden">Ler menos</span>
+              <svg class="hs-collapse-open:rotate-180 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+          </p>
         </div>
       </div>
     </div>
@@ -76,7 +97,7 @@ import Paginador from "../components/paginador.astro";
   </div>
   <!-- Matriz de libros -->
   <div class="caixa mt-12">
-    <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-6 mt-6">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-6 mt-6">
       {
         data.libros.map((libro) => (
           <div>

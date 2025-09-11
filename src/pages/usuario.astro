@@ -17,7 +17,6 @@ import Actividade from "../components/usuario/actividade.astro";
       <div class="flex flex-col gap-6 lg:flex-row justify-between">
         <div>
           <h1 class="text-4xl lg:text-5xl">Paula Alonso</h1>
-          <div class="text-slate-400 mt-3">A Coruña | Uniuse en Marzo de 2025</div>
         </div>
         <div>
           <button id="btn-seguir" type="button" class="boton azul flex items-center gap-2">
@@ -46,7 +45,7 @@ import Actividade from "../components/usuario/actividade.astro";
           </script>
         </div>
       </div>
-      <!-- botóns estados dos libros -->
+      <!-- POR AHORA QUITAMOS botóns estados dos libros
       <div class="flex flex-col md:flex-row gap-6 mt-9">
         <div>
           <a href="/usuario_lista" class="boton gris !text-slate-900">
@@ -73,18 +72,28 @@ import Actividade from "../components/usuario/actividade.astro";
           </a>
         </div>
       </div>
+      -->
+      <!-- seguidores, seguidos, valoraciones -->
+      <div class="mt-4 text-slate-500 font-bold">
+        <div class="flex items-baseline gap-4">
+          <div>68 <span class="font-normal">seguidores</span></div>
+          <div>18 <span class="font-normal">seguidos</span></div>
+          <div>8 <span class="font-normal">valoraciones</span></div>
+        </div>
+      </div>
       <!-- descrición -->
-      <div class="mt-9 space-y-3 max-w-lg">
+      <div class="mt-6 space-y-3 max-w-lg">
         <p>Apaixonada polos libros, soñadora entre páxinas e sempre na procura dunha nova historia.</p>
       </div>
-      <!-- seguidores, seguidos, valoraciones -->
-      <div class="mt-9 text-base text-slate-500 font-bold">
-        <div class="flex items-baseline gap-1">
-          68 <div class="text-sm font-normal">seguidores</div>
-          <div class="border-l border-slate-400 h-4 mx-2"></div>
-          18 <div class="text-sm font-normal">seguidos</div>
-          <div class="border-l border-slate-400 h-4 mx-2"></div>
-          8 <div class="text-sm font-normal">valoraciones</div>
+      <!-- Lugar e data -->
+      <div class="text-slate-400 mt-9 text-sm">
+        <div class="flex items-center gap-3 mb-1">
+          <svg class="fill-none stroke-current size-4 stroke-2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          A Coruña
+        </div>
+        <div class="flex items-center gap-3 mb-1">
+          <svg class="fill-none stroke-current size-4 stroke-2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>
+          Uniuse en Marzo de 2025
         </div>
       </div>
     </div>
