@@ -1,0 +1,145 @@
+{
+    "autores": [
+        {
+            "nombre": "Manuel Rivas",
+            "titulos": 7,
+            "seguidores": 400,
+            "descripcion": "Autores galegos do momento",
+            "imagen": "https://picsum.photos/id/275/400",
+            "slug": "manuel-rivas"
+        },
+        {
+            "nombre": "Santiago Lopo",
+            "titulos": 4,
+            "seguidores": 320,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "santiago-lopo"
+        },
+        {
+            "nombre": "Chus Pato",
+            "titulos": 13,
+            "seguidores": 300,
+            "imagen": "https://picsum.photos/id/325/400",
+            "slug": "chus-pato"
+        },
+        {
+            "nombre": "Moncho Iglesias Míguez",
+            "titulos": 25,
+            "seguidores": 280,
+            "imagen": "https://picsum.photos/id/338/400",
+            "slug": "moncho-iglesias-miguez"
+        },
+        {
+            "nombre": "María López Sández",
+            "titulos": 6,
+            "seguidores": 245,
+            "imagen": "https://picsum.photos/id/342/400",
+            "slug": "maria-lopez-sandez"
+        },
+        {
+            "nombre": "Pedro Feijoo",
+            "titulos": 11,
+            "seguidores": 400,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "pedro-feijoo"
+        },
+        {
+            "nombre": "Ledicia Costas",
+            "titulos": 5,
+            "seguidores": 320,
+            "imagen": "https://picsum.photos/id/349/400",
+            "slug": "ledicia-costas"
+        },
+        {
+            "nombre": "Domingo Villar",
+            "titulos": 8,
+            "seguidores": 300,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "domingo-villar"
+        },
+        {
+            "nombre": "Manuel Loureiro",
+            "titulos": 2,
+            "seguidores": 280,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "manuel-loureiro"
+        },
+        {
+            "nombre": "Castelao",
+            "titulos": 3,
+            "seguidores": 245,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "castelao"
+        },
+        {
+            "nombre": "María Oruña",
+            "titulos": 4,
+            "seguidores": 400,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "maria-oruna"
+        },
+        {
+            "nombre": "Xela Arias",
+            "titulos": 6,
+            "seguidores": 320,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "xela-arias"
+        },
+        {
+            "nombre": "Suso de Toro",
+            "titulos": 3,
+            "seguidores": 300,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "suso-de-toro"
+        },
+        {
+            "nombre": "Marta Villar",
+            "titulos": 10,
+            "seguidores": 280,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "marta-villar"
+        },
+        {
+            "nombre": "Xabier Quiroga",
+            "titulos": 5,
+            "seguidores": 245,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "xabier-quiroga"
+        },
+        {
+            "nombre": "Alberto Canal",
+            "titulos": 3,
+            "seguidores": 320,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "alberto-canal-rosalia-de-castro"
+        },
+                {
+            "nombre": "Rosalía de Castro",
+            "titulos": 50,
+            "seguidores": 320,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "alberto-canal-rosalia-de-castro"
+        },
+        {
+            "nombre": "Ramón D. Veiga",
+            "titulos": 250,
+            "seguidores": 300,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "ramon-d-veiga"
+        },
+        {
+            "nombre": "Antía Yañez",
+            "titulos": 6,
+            "seguidores": 280,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "antia-yanez"
+        },
+        {
+            "nombre": "Xosé Neira Vilas",
+            "titulos": 7,
+            "seguidores": 245,
+            "imagen": "https://picsum.photos/id/64/400",
+            "slug": "xose-neira-vilas"
+        }
+    ]
+}

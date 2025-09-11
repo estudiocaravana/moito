@@ -1,0 +1,46 @@
+{
+    "editoriais": {
+        "A": [
+            { "nome": "AGEA Editora", "titulos": 7 },
+            { "nome": "Aira Editorial", "titulos": 22 },
+            { "nome": "Alvarellos Editora", "titulos": 13 },
+            { "nome": "Andavira Editora", "titulos": 18 },
+            { "nome": "Antela Editorial", "titulos": 9 }
+        ],
+        "B": [
+            { "nome": "Baía Edicións", "titulos": 16 },
+            { "nome": "Belagua", "titulos": 11 },
+            { "nome": "Biblos Clube de Lectores", "titulos": 20 },
+            { "nome": "Boadicea Editora", "titulos": 6 },
+            { "nome": "Bolanda", "titulos": 25 },
+            { "nome": "Bululú", "titulos": 12 },
+            { "nome": "Bunker Books", "titulos": 17 }
+        ],
+        "C": [
+            { "nome": "Colex", "titulos": 8 },
+            { "nome": "Cuarto de Inverno", "titulos": 19 },
+            { "nome": "Cumio", "titulos": 15 },
+            { "nome": "Cydonia C", "titulos": 10 }
+        ],
+        "D": [
+            { "nome": "Demo Editorial", "titulos": 21 },
+            { "nome": "Dorna Edicións", "titulos": 5 }
+        ],
+        "E": [
+            { "nome": "Edicións Xerais de Galicia", "titulos": 23 },
+            { "nome": "Editorial Galaxia", "titulos": 14 },
+            { "nome": "Editorial Toxosoutos", "titulos": 18 },
+            { "nome": "Ediciones del Viento", "titulos": 9 }
+        ],
+        "G": [
+            { "nome": "Galaxia Gutenberg", "titulos": 12 },
+            { "nome": "Galaxia Nova", "titulos": 20 }
+        ],
+        "H": [
+            { "nome": "Hércules Ediciones", "titulos": 16 }
+        ]
+        
+    }
+}
+        
+
