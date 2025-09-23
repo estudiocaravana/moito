@@ -36,16 +36,36 @@ import Paginador from "../components/paginador.astro";
               </svg>
             </button>
             <div
-              class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-slate-100 shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-30"
+              class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 p-6 bg-slate-100 shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-30"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="hs-dropdown-default"
             >
               <div class="p-1 space-y-0.5">
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-slate-200 focus:outline-hidden focus:bg-slate-200" href="#">Opción 1</a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-slate-200 focus:outline-hidden focus:bg-slate-200" href="#">Opción 2</a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-slate-200 focus:outline-hidden focus:bg-slate-200" href="#">Opción 3</a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-slate-200 focus:outline-hidden focus:bg-slate-200" href="#">Opción 4</a>
+                <button class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-white focus:outline-hidden focus:bg-white w-full">
+                  <svg class="fill-yellow-500 stroke-yellow-500 size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+                  </svg>
+                  Pendentes
+                </button>
+                <button class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-white focus:outline-hidden focus:bg-white w-full">
+                  <svg class="fill-cyan-500 stroke-cyan-500 size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+                  </svg>
+                  Lendo
+                </button>
+                <button class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-white focus:outline-hidden focus:bg-white w-full">
+                  <svg class="fill-green-500 stroke-green-500 size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+                  </svg>
+                  Lidos
+                </button>
+                <button class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-base text-gray-800 hover:bg-white focus:outline-hidden focus:bg-white w-full">
+                  <svg class="fill-black stroke-black size-6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+                  </svg>
+                  Lista personalizada
+                </button>
               </div>
             </div>
           </div>
