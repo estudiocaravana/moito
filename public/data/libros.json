@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Curriño. O can influencer",
+    "category": "Ledicia Costas",
+    "image": "/libros/can.jpg"
+  },
+  {
+    "name": "A botella de lentellas",
+    "category": "Leticia Barbadillo",
+    "image": "/libros/lentellas.jpg"
+  },
+  {
+    "name": "A nena que quería tocar as estrelas",
+    "category": "Javier Fernández",
+    "image": "/libros/nena.jpg"
+  },
+  {
+    "name": "Nerea e o misterio do faro",
+    "category": "Xosé Tomás",
+    "image": "/libros/nerea.jpg"
+  },
+  {
+    "name": "Falsa memoria",
+    "category": "Xabier Quiroga",
+    "image": "/libros/falsa.jpg"
+  },
+  {
+    "name": "Somos auga",
+    "category": "Xurxo Souto",
+    "image": "/libros/somos.jpg"
+  },
+  {
+    "name": "A ladroa de libros",
+    "category": "María Solar",
+    "image": "/libros/ladroa.jpg"
+  },
+  {
+    "name": "Dez contos para ler na praia",
+    "category": "Varios Autores",
+    "image": "/libros/dez.jpg"
+  }
+]
