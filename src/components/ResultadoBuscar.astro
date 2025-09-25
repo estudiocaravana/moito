@@ -1,0 +1,45 @@
+---
+import data from "../data/autor.json";
+import InputBuscar from "./InputBuscar.astro";
+---
+
+<!-- SearchBox Dropdown -->
+<div
+  class="absolute z-50 w-full bg-white border border-gray-200 rounded-xl p-6 pr-0"
+>
+  <div
+    class="max-h-[500px] rounded-b-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300"
+  >
+    <!-- sólo input en muvil -->
+    <div class="relative pr-6 lg:hidden">
+      <InputBuscar />
+    </div>
+    <!--  -->
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-6 mt-6 pr-6"
+    >
+      {
+        data.libros.map((libro) => (
+          <div>
+            <a href="/libro" class="hover:text-cyan-500">
+              <div>
+                <div class=" aspect-[1/1.8] flex items-end">
+                  <img
+                    class="shadow-md transition-all duration-300 hover:mb-3"
+                    src={`/manolo/${libro.imaxe}.jpg`}
+                    alt="A brown dog sitting on a grassy field under a clear sky, looking attentively forward, surrounded by trees in the background, calm and peaceful atmosphere"
+                  />
+                </div>
+              </div>
+              <div class="text-sm font-bold mt-2 leading-[1.3em]">
+                {libro.tit}
+              </div>
+              <div class="text-xs mt-1">Manuel Rivas</div>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+<!-- End SearchBox Dropdown -->
