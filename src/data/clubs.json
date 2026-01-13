@@ -1,0 +1,52 @@
+{
+    "clubs": [
+{
+    "nombre": "Las Agónicas",
+    "acceso": false,
+    "descripcion": "Nos juntaremos el cuarto miércoles de cada mes a las 21 h. en el Bar Princesa, plaza de la constitución, Vigo.",
+    "localizacion": "Bar Princesa, Vigo",
+    "tipo": "Adulto",
+    "slug": "las-agonicas"
+},
+{
+    "nombre": "Ler e compartir",
+    "acceso": true,
+    "descripcion": "Os clubs de lectura xerais son grupos de persoas que se reúnen periodicamente para comentar e valorar os libros",
+    "localizacion": "Fórum Metropolitano, A Coruña",
+    "tipo": "Adulto",
+    "slug": "ler-e-compartir"
+},
+{
+    "nombre": "Miúdo",
+    "acceso": true,
+    "descripcion": "Nos juntaremos el cuarto miércoles de cada mes a las 21 h. en el Bar Princesa, plaza de la constitución, Vigo",
+    "localizacion": "Libraría Rosalía e Compañía, Redondela",
+    "tipo": "Infantil",
+    "slug": "miudo"
+},
+{
+    "nombre": "Gabo Cinefórum",
+    "acceso": true,
+    "descripcion": "Nos juntaremos el cuarto miércoles de cada mes a las 21 h. en el Bar Princesa, plaza de la constitución, Vigo.",
+    "localizacion": "virtual",
+    "tipo": "Adulto",
+    "slug": "gabo-cineforum"
+},
+{
+    "nombre": "Lecturarte",
+    "acceso": true,
+    "descripcion": "Nos juntaremos el cuarto miércoles de cada mes a las 21 h. en el Bar Princesa, plaza de la constitución, Vigo.",
+    "localizacion": "virtual",
+    "tipo": "Adulto",
+    "slug": "lecturarte"
+},
+{
+    "nombre": "Rosalía e Compañía",
+    "acceso": false,
+    "descripcion": "Os clubs de lectura xerais son grupos de persoas que se reúnen periodicamente para comentar e valorar os libros ...",
+    "localizacion": "Libraría Rosalía e Compañía, Redondela",
+    "tipo": "Adulto",
+    "slug": "rosalia-e-compania"
+}
+    ]
+}
