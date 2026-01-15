@@ -1,0 +1,82 @@
+<div>
+  <button type="button" class="boton negro" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-offcanvas-example" data-hs-overlay="#hs-offcanvas-example">
+    <svg class="size-6 stroke-current stroke-2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="21" x2="14" y1="4" y2="4"></line><line x1="10" x2="3" y1="4" y2="4"></line>
+      <line x1="21" x2="12" y1="12" y2="12"></line><line x1="8" x2="3" y1="12" y2="12"></line>
+      <line x1="21" x2="16" y1="20" y2="20"></line><line x1="12" x2="3" y1="20" y2="20"></line>
+      <line x1="14" x2="14" y1="2" y2="6"></line><line x1="8" x2="8" y1="10" y2="14"></line>
+      <line x1="16" x2="16" y1="18" y2="22"></line>
+    </svg>
+    <span class="white">Filtrar <span class="hidden sm:inline-block">clubs</span></span>
+  </button>
+
+  <div id="hs-offcanvas-example" class="hs-overlay hs-overlay-open:translate-x-0 hidden -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-xs w-full z-80 bg-white" role="dialog" tabindex="-1" aria-labelledby="hs-offcanvas-example-label">
+    <div class="py-3 px-4 flex w-full justify-end">
+      <button type="button" class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent hover:bg-slate-200 focus:outline-hidden focus:bg-slate-200 disabled:opacity-50 disabled:pointer-events-none" aria-label="Close" data-hs-overlay="#hs-offcanvas-example">
+        <span class="sr-only">Close</span>
+        <svg class="shrink-0 size-6 stroke-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="p-6">
+      <!-- provincias -->
+      <div class="flex flex-col gap-3 mt-6">
+        <h2>Provincias</h2>
+        <div class="flex">
+          <input type="checkbox" class="shrink-0 mt-0.5 border-slate-300 rounded-sm text-cyan-600 focus:ring-cyan-500 checked:border-cyan-500 disabled:opacity-50 disabled:pointer-events-none" id="hs-default-checkbox" />
+          <label for="hs-default-checkbox" class="text-sm ms-3">A Coruña</label>
+        </div>
+        <div class="flex">
+          <input type="checkbox" class="shrink-0 mt-0.5 border-slate-300 rounded-sm text-cyan-600 focus:ring-cyan-500 checked:border-cyan-500 disabled:opacity-50 disabled:pointer-events-none" id="hs-default-checkbox" />
+          <label for="hs-default-checkbox" class="text-sm ms-3">Lugo</label>
+        </div>
+        <div class="flex">
+          <input type="checkbox" class="shrink-0 mt-0.5 border-slate-300 rounded-sm text-cyan-600 focus:ring-cyan-500 checked:border-cyan-500 disabled:opacity-50 disabled:pointer-events-none" id="hs-default-checkbox" />
+          <label for="hs-default-checkbox" class="text-sm ms-3">Ourense</label>
+        </div>
+        <div class="flex">
+          <input type="checkbox" class="shrink-0 mt-0.5 border-slate-300 rounded-sm text-cyan-600 focus:ring-cyan-500 checked:border-cyan-500 disabled:opacity-50 disabled:pointer-events-none" id="hs-default-checkbox" />
+          <label for="hs-default-checkbox" class="text-sm ms-3">Pontevedra</label>
+        </div>
+      </div>
+      <!-- acceso -->
+      <div class="flex flex-col gap-3 mt-6">
+        <h2>Acceso</h2>
+        <div class="flex">
+          <input type="checkbox" class="shrink-0 mt-0.5 border-slate-300 rounded-sm text-cyan-600 focus:ring-cyan-500 checked:border-cyan-500 disabled:opacity-50 disabled:pointer-events-none" id="hs-default-checkbox" />
+          <label for="hs-default-checkbox" class="text-sm ms-3">Aberto</label>
+        </div>
+        <div class="flex">
+          <input type="checkbox" class="shrink-0 mt-0.5 border-slate-300 rounded-sm text-cyan-600 focus:ring-cyan-500 checked:border-cyan-500 disabled:opacity-50 disabled:pointer-events-none" id="hs-default-checkbox" />
+          <label for="hs-default-checkbox" class="text-sm ms-3">Por invitación</label>
+        </div>
+      </div>
+      <!-- modalidad -->
+      <div class="flex flex-col gap-3 mt-6">
+        <h2>Modalidad</h2>
+        <div class="flex">
+          <input type="checkbox" class="shrink-0 mt-0.5 border-slate-300 rounded-sm text-cyan-600 focus:ring-cyan-500 checked:border-cyan-500 disabled:opacity-50 disabled:pointer-events-none" id="hs-default-checkbox" />
+          <label for="hs-default-checkbox" class="text-sm ms-3">Presencial</label>
+        </div>
+        <div class="flex">
+          <input type="checkbox" class="shrink-0 mt-0.5 border-slate-300 rounded-sm text-cyan-600 focus:ring-cyan-500 checked:border-cyan-500 disabled:opacity-50 disabled:pointer-events-none" id="hs-default-checkbox" />
+          <label for="hs-default-checkbox" class="text-sm ms-3">Virtual</label>
+        </div>
+      </div>
+      <!-- público -->
+      <div class="flex flex-col gap-3 mt-6">
+        <h2>Público</h2>
+        <div class="flex">
+          <input type="checkbox" class="shrink-0 mt-0.5 border-slate-300 rounded-sm text-cyan-600 focus:ring-cyan-500 checked:border-cyan-500 disabled:opacity-50 disabled:pointer-events-none" id="hs-default-checkbox" />
+          <label for="hs-default-checkbox" class="text-sm ms-3">Adulto</label>
+        </div>
+        <div class="flex">
+          <input type="checkbox" class="shrink-0 mt-0.5 border-slate-300 rounded-sm text-cyan-600 focus:ring-cyan-500 checked:border-cyan-500 disabled:opacity-50 disabled:pointer-events-none" id="hs-default-checkbox" />
+          <label for="hs-default-checkbox" class="text-sm ms-3">Infantil</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
