@@ -1,0 +1,40 @@
+---
+import Estrelas from "../Estrelas.astro";
+import Valoracions from "./Valoracions.astro";
+---
+
+<div class="flex flex-col md:flex-row gap-6 mg:gap-12 py-9">
+  <!-- Imagen a la izquierda -->
+  <div>
+    <img src="/libro/portada.jpg" alt="Libro" class="w-60 object-cover" />
+  </div>
+
+  <!-- Contenido a la derecha -->
+  <div class="flex-1">
+    <h2 class="text-4xl font-bold mb-2">Tras do ceo</h2>
+    <p class="text-gray-700 mb-4">Lendo actualmente - Periodo de lectura: 25.12.2025 - 20.01.2026</p>
+    <div class="bg-slate-100 px-9 py-6 rounded inline-block mt-6">
+      <p class="font-medium text-slate-400">Valoracións pechadas ata o día 21.01.2026</p>
+    </div>
+  </div>
+</div>
+
+<div class="flex flex-col md:flex-row gap-6 mg:gap-12 py-9">
+  <!-- Imagen a la izquierda -->
+  <div class="flex-shrink-0">
+    <img src="/libro/portada-nena.jpg" alt="Libro" class="w-60 object-cover rounded" />
+  </div>
+
+  <!-- Contenido a la derecha -->
+  <div class="flex-1">
+    <h2 class="text-4xl font-bold mb-2">A nena lectora</h2>
+    <p class="text-gray-700 mb-4">Lendo actualmente - Periodo de lectura: 25.12.2025 - 20.01.2026</p>
+    <div class="bg-slate-100 px-9 py-6 rounded inline-block mt-6">
+      <p class="font-medium text-slate-400">Axuda a outros lectores deixando a túa valoración sobre este libro</p>
+      <div class="mt-3 flex items-left">
+        <Estrelas />
+      </div>
+    </div>
+    <Valoracions />
+  </div>
+</div>
