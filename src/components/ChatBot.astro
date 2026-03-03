@@ -3,9 +3,13 @@
 ---
 
 <div class="flex items-center justify-center b-slate-100">
-  <!-- Botón sticky -->
-  <button id="chatBtn" class="fixed bottom-6 right-6 bg-linear-to-r from-teal-400 to-cyan-500 hover:bg-cyan-500 transition duration-300 text-white rounded-full p-4 shadow-lg shadow-cyan-800/30 z-40">
+  <!-- Botón sticky: las dos versiones. quitar el que sea en producción -->
+  <button id="loquesea" class="hidden fixed bottom-6 right-6 bg-linear-to-r from-teal-400 to-cyan-500 hover:bg-cyan-500 transition duration-300 text-white rounded-full p-4 shadow-lg shadow-cyan-800/30 z-40">
     <svg class="size-6 stroke-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg>
+  </button>
+
+  <button id="chatBtn" class="fixed bottom-6 right-6 hover:shadow-sm transition duration-300 rounded-full shadow-lg shadow-cyan-800/30 z-40">
+    <img src="/activador-chatbot-circulo.svg" class="size-14" alt="" />
   </button>
 
   <!-- Card overflow -->
@@ -96,11 +100,11 @@
     messageInput.style.height = messageInput.scrollHeight + "px";
   });
 
-  const messageInputElement = document.getElementById('messageInput');
-  messageInputElement?.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
-        document.getElementById('sendBtn')?.click();
+  const messageInputElement = document.getElementById("messageInput");
+  messageInputElement?.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      document.getElementById("sendBtn")?.click();
     }
-});
+  });
 </script>
